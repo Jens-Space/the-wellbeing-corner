@@ -1,6 +1,42 @@
-import Link from 'next/link'
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+
+interface MotivationalMessage {
+  message: string;
+  emoji: string;
+  category: string;
+  generated_at: string;
+}
+
+interface WellnessTip {
+  tip: string;
+  category: string;
+  difficulty: string;
+  generated_at: string;
+}
 
 export default function Home() {
+  const [message, setMessage] = useState<MotivationalMessage | null>(null);
+  const [wellnessTip, setWellnessTip] = useState<WellnessTip | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Fetch motivational message from Python API
+    fetch('/api/motivational?category=general')
+      .then(res => res.json())
+      .then(data => setMessage(data))
+      .catch(err => console.error('Error fetching message:', err));
+
+    // Fetch wellness tip from Python API
+    fetch('/api/wellness-tip')
+      .then(res => res.json())
+      .then(data => setWellnessTip(data))
+      .catch(err => console.error('Error fetching wellness tip:', err))
+      .finally(() => setLoading(false));
+  }, []);
+
   return (
     <div id="top" className="space-y-10 md:space-y-14 lg:space-y-16">
       {/* Hero Section */}
@@ -11,7 +47,21 @@ export default function Home() {
           You're here, and that takes courage. Whether you're navigating your own mental health journey, supporting someone you care about, 
           or simply curious to learn more — this is a safe, judgment-free space for you.
         </p>
-        <p className="text-base md:text-lg lg:text-xl text-gray-700 max-w-5xl lg:max-w-6xl mx-auto font-semibold">
+        
+        {/* Python-Generated Motivational Message */}
+        {loading ? (
+          <div className="bg-white/50 rounded-lg p-4 mt-4 animate-pulse">
+            <p className="text-gray-500">Loading message...</p>
+          </div>
+        ) : message ? (
+          <div className="bg-white/70 rounded-lg p-4 mt-4">
+            <p className="text-xl md:text-2xl text-gray-800 font-semibold">
+              {message.emoji} {message.message}
+            </p>
+          </div>
+        ) : null}
+        
+        <p className="text-base md:text-lg lg:text-xl text-gray-700 max-w-5xl lg:max-w-6xl mx-auto font-semibold mt-4">
           ✨ Your feelings matter. Your story matters. You matter. ✨
         </p>
       </div>
@@ -66,6 +116,36 @@ export default function Home() {
             <p className="text-sm text-gray-600">Explore all support options above</p>
           </div>
         </div>
+      </div>
+
+      {/* Python-Generated Wellness Tip */}
+      <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-6 md:p-8 lg:p-10 border-l-4 border-green-400">
+        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-green-900 mb-4 md:mb-6 text-center">🌿 Quick Wellness Tip (Powered by Python)</h3>
+        {loading ? (
+          <div className="bg-white/50 rounded-lg p-4 animate-pulse">
+            <p className="text-gray-500">Loading tip...</p>
+          </div>
+        ) : wellnessTip ? (
+          <div className="bg-white rounded-lg p-5 md:p-6 shadow-sm border-l-4 border-green-400">
+            <p className="text-lg md:text-xl text-gray-800 font-semibold mb-3">
+              💡 {wellnessTip.tip}
+            </p>
+            <div className="flex gap-3 text-sm">
+              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+                Category: {wellnessTip.category}
+              </span>
+              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                Difficulty: {wellnessTip.difficulty}
+              </span>
+            </div>
+          </div>
+        ) : (
+          <div className="bg-white rounded-lg p-5 md:p-6 shadow-sm border-l-4 border-green-400">
+            <p className="text-lg md:text-xl text-gray-800">
+              Take a moment to breathe deeply. You're doing great! 🌸
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Mission Statement */}

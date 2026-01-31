@@ -1,8 +1,56 @@
 # 🌱 Mental Health Hub
 
-Mental Health Hub is an inclusive, compassionate website built with **Next.js**, designed to support **adults, teens, and children**, including those affected by **chronic pain, invisible illness, and mood disorders**.
+Mental Health Hub is an inclusive, compassionate website built with **Next.js** and **Python**, designed to support **adults, teens, and children**, including those affected by **chronic pain, invisible illness, and mood disorders**.
 
 This project focuses on education, validation, accessibility, and safe signposting — not diagnosis or treatment.
+
+---
+
+## 🐍 Python Integration
+
+This project uses **Python** alongside Next.js to generate dynamic content. The Python scripts handle content generation for:
+
+- Motivational messages
+- Wellness tips
+- Resource recommendations
+- Topic overviews
+
+### Python Scripts Location
+
+All Python scripts are located in `src/python/`:
+
+- `content_generator.py` - Main content generation module
+
+### API Routes
+
+Python functions are exposed via Next.js API routes:
+
+| Endpoint | Purpose |
+|----------|---------|
+| `/api/motivational?category=<category>` | Get motivational messages (general, anxiety, depression, stress, teens) |
+| `/api/resources?topic=<topic>&ageGroup=<adults|teens>` | Get resource recommendations |
+| `/api/wellness-tip` | Get random wellness tips |
+| `/api/topic?topic=<topic>` | Get topic overviews |
+
+### How It Works
+
+1. Python scripts define content generation functions
+2. Next.js API routes call these functions using `child_process`
+3. Frontend pages fetch from API routes to display Python-generated content
+
+### Example Usage
+
+```typescript
+// Fetch motivational message from Python
+const response = await fetch('/api/motivational?category=anxiety');
+const data = await response.json();
+console.log(data.message); // "Take a deep breath. You're safe right now."
+```
+
+### Requirements
+
+- Python 3.x must be installed
+- `python3` command must be available in PATH
 
 ---
 
