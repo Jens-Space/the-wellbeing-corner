@@ -236,15 +236,15 @@ export default function TeenBodyImagePage() {
       </div>
 
       {/* Footer Buttons */}
-      <div className="mt-6 md:mt-12 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+      <div className="flex flex-wrap justify-center gap-3 mt-6">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="inline-block px-6 py-3 bg-lime-600 text-white rounded-lg hover:bg-lime-700 transition-colors mr-4"
+          className="px-4 py-2 sm:px-6 sm:py-3 bg-lime-600 text-white rounded-lg hover:bg-lime-700 transition-colors text-sm sm:text-base"
         >
           Back to Top
         </button>
-        <Link href="/teens" className="inline-block px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">
-          ← Back to Teen Support
+        <Link href="/teens" className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm sm:text-base">
+          Back to Teen Support
         </Link>
       </div>
     </div>

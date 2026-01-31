@@ -211,16 +211,16 @@ export default function AISupportPage() {
       </div>
 
       {/* Navigation Buttons */}
-      <div className="mt-6 md:mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+      <div className="flex flex-wrap justify-center gap-3 mt-6">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+          className="px-4 py-2 sm:px-6 sm:py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors text-sm sm:text-base"
         >
-          ↑ Back to Top
+          Back to Top
         </button>
         <Link
           href="/"
-          className="px-6 py-3 bg-gray-600 text-white rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+          className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-600 text-white rounded-lg font-semibold hover:bg-gray-700 transition-colors text-sm sm:text-base"
         >
           Back to Home
         </Link>

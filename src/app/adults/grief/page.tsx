@@ -249,15 +249,15 @@ export default function GriefPage() {
         </div>
       </div>
 
-      <div className="text-center mt-8">
+      <div className="flex flex-wrap justify-center gap-3 mt-6">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="inline-block px-6 py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors mr-4"
+          className="px-4 py-2 sm:px-6 sm:py-3 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors text-sm sm:text-base"
         >
           Back to Top
         </button>
-        <Link href="/adults" className="inline-block px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">
-          ← Back to Adult Support
+        <Link href="/adults" className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm sm:text-base">
+          Back to Adult Support
         </Link>
       </div>
     </div>
