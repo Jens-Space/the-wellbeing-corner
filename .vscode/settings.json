@@ -1,0 +1,6 @@
+{
+    "git.ignoreLimitWarning": true,
+    "chat.agent.maxRequests": 100,
+    "chat.editor.fontSize": 16,
+    "chat.fontSize": 16
+}
