@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/nextjs"
+
+# Optional: Configure Next.js to output static files
+[functions]
+  directory = "netlify/functions"

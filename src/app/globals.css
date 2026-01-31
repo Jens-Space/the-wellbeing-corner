@@ -3,6 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile viewport fix */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* CSS Variables for primary colors */
 :root {
   --primary-50: #f0f9ff;
