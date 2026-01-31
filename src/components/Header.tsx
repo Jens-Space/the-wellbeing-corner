@@ -16,7 +16,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-primary-700 flex items-center gap-2 flex-shrink-0">
-            🌱 Mental Health Hub
+            🌱 The Wellbeing Corner
           </Link>
 
           {/* Desktop Menu - Centered */}

@@ -1,9 +1,9 @@
-# Mental Health Hub - Development Progress
+# The Wellbeing Corner - Development Progress
 
-**Last Updated:** 2026-01-31T13:15:00.000Z (UTC)
+**Last Updated:** 2026-01-31T17:50:00.000Z (UTC)
 
 ## 🎯 Project Overview
-Mental Health Hub website built with Next.js, TypeScript, and Tailwind CSS. Focuses on education, validation, and safe signposting for mental health support.
+The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwind CSS. Focuses on education, validation, and safe signposting for mental health support.
 
 ## ✅ Completed Tasks
 
@@ -84,7 +84,7 @@ Mental Health Hub website built with Next.js, TypeScript, and Tailwind CSS. Focu
 
 - **2026-01-31T11:45:00.000Z**: Removed "Home" menu item from navigation header:
   - Removed `Home` from `menuItems` array in `Header.tsx` since logo already serves as home button
-  - Logo "🌱 Mental Health Hub" on line 22 was already wrapped in Link component pointing to "/"
+  - Logo "🌱 The Wellbeing Corner" on line 22 was already wrapped in Link component pointing to "/"
   - Navigation now only shows: For Adults, For Teens, For Families, Get Help
   - Cleaner navigation with logo serving dual purpose
 
@@ -223,4 +223,4 @@ Mental Health Hub website built with Next.js, TypeScript, and Tailwind CSS. Focu
 - Prepare for deployment when ready
 
 ---
-*This progress file documents the development journey of the Mental Health Hub website.*
+*This progress file documents the development journey of The Wellbeing Corner website.*

@@ -1,67 +1,17 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-interface MotivationalMessage {
-  message: string;
-  emoji: string;
-  category: string;
-  generated_at: string;
-}
-
-interface WellnessTip {
-  tip: string;
-  category: string;
-  difficulty: string;
-  generated_at: string;
-}
+import Link from 'next/link'
 
 export default function Home() {
-  const [message, setMessage] = useState<MotivationalMessage | null>(null);
-  const [wellnessTip, setWellnessTip] = useState<WellnessTip | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Fetch motivational message from Python API
-    fetch('/api/motivational?category=general')
-      .then(res => res.json())
-      .then(data => setMessage(data))
-      .catch(err => console.error('Error fetching message:', err));
-
-    // Fetch wellness tip from Python API
-    fetch('/api/wellness-tip')
-      .then(res => res.json())
-      .then(data => setWellnessTip(data))
-      .catch(err => console.error('Error fetching wellness tip:', err))
-      .finally(() => setLoading(false));
-  }, []);
-
   return (
     <div id="top" className="space-y-10 md:space-y-14 lg:space-y-16">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 md:p-12 lg:p-16 text-center shadow-lg">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-indigo-900 mb-3 md:mb-4 lg:mb-6">🌱 Welcome to Mental Health Hub</h1>
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-indigo-900 mb-3 md:mb-4 lg:mb-6">🌱 Welcome to The Wellbeing Corner</h1>
         <p className="text-base md:text-lg lg:text-xl text-indigo-700 mb-4 md:mb-6 lg:mb-8 font-semibold">Your space for understanding, support, and hope</p>
         <p className="text-base md:text-lg lg:text-xl text-gray-700 max-w-5xl lg:max-w-6xl mx-auto mb-6 md:mb-8 lg:mb-10 leading-relaxed">
           You're here, and that takes courage. Whether you're navigating your own mental health journey, supporting someone you care about, 
           or simply curious to learn more — this is a safe, judgment-free space for you.
         </p>
-        
-        {/* Python-Generated Motivational Message */}
-        {loading ? (
-          <div className="bg-white/50 rounded-lg p-4 mt-4 animate-pulse">
-            <p className="text-gray-500">Loading message...</p>
-          </div>
-        ) : message ? (
-          <div className="bg-white/70 rounded-lg p-4 mt-4">
-            <p className="text-xl md:text-2xl text-gray-800 font-semibold">
-              {message.emoji} {message.message}
-            </p>
-          </div>
-        ) : null}
-        
-        <p className="text-base md:text-lg lg:text-xl text-gray-700 max-w-5xl lg:max-w-6xl mx-auto font-semibold mt-4">
+        <p className="text-base md:text-lg lg:text-xl text-gray-700 max-w-5xl lg:max-w-6xl mx-auto font-semibold">
           ✨ Your feelings matter. Your story matters. You matter. ✨
         </p>
       </div>
@@ -118,42 +68,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Python-Generated Wellness Tip */}
-      <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-6 md:p-8 lg:p-10 border-l-4 border-green-400">
-        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-green-900 mb-4 md:mb-6 text-center">🌿 Quick Wellness Tip (Powered by Python)</h3>
-        {loading ? (
-          <div className="bg-white/50 rounded-lg p-4 animate-pulse">
-            <p className="text-gray-500">Loading tip...</p>
-          </div>
-        ) : wellnessTip ? (
-          <div className="bg-white rounded-lg p-5 md:p-6 shadow-sm border-l-4 border-green-400">
-            <p className="text-lg md:text-xl text-gray-800 font-semibold mb-3">
-              💡 {wellnessTip.tip}
-            </p>
-            <div className="flex gap-3 text-sm">
-              <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full">
-                Category: {wellnessTip.category}
-              </span>
-              <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
-                Difficulty: {wellnessTip.difficulty}
-              </span>
-            </div>
-          </div>
-        ) : (
-          <div className="bg-white rounded-lg p-5 md:p-6 shadow-sm border-l-4 border-green-400">
-            <p className="text-lg md:text-xl text-gray-800">
-              Take a moment to breathe deeply. You're doing great! 🌸
-            </p>
-          </div>
-        )}
-      </div>
-
       {/* Mission Statement */}
       <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-lg shadow-sm p-8 md:p-10 lg:p-12 border-l-4 border-rose-400">
         <h2 className="text-3xl lg:text-4xl font-bold text-rose-900 mb-6 md:mb-8 lg:mb-10 text-center">💙 Our Promise to You</h2>
         <div className="max-w-5xl lg:max-w-6xl mx-auto space-y-5 lg:space-y-6 text-gray-800">
           <p className="text-lg lg:text-xl leading-relaxed">
-            At Mental Health Hub, we believe that <strong>every person deserves compassion, understanding, and a place to feel truly heard.</strong>
+            At The Wellbeing Corner, we believe that <strong>every person deserves compassion, understanding, and a place to feel truly heard.</strong>
             Mental health isn't one-size-fits-all — it's shaped by your unique experiences, your struggles, your victories, and everything in between.
           </p>
           <p className="text-lg leading-relaxed">

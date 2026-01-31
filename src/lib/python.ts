@@ -27,18 +27,33 @@ export function executePython(
     const projectRoot = process.cwd();
     const fullPath = path.join(projectRoot, scriptPath);
     
-    // Build the Python command
-    const pythonArgs = JSON.stringify(args);
-    const command = `python3 -c "
+    // Build the Python command with proper escaping
+    // Use single quotes for strings in Python to avoid shell escaping issues
+    const pythonArgs = args.map(arg => {
+      if (typeof arg === 'string') {
+        return `'${arg.replace(/'/g, "\\'")}'`; // Single-quoted with escape
+      }
+      return JSON.stringify(arg);
+    }).join(', ');
+    
+    // Write Python script to temp file and execute it
+    const fs = require('fs');
+    const tempScript = `/tmp/python_script_${Date.now()}.py`;
+    const pythonCode = `
 import sys
 import json
-sys.path.insert(0, '${projectRoot}')
+sys.path.insert(0, '${path.dirname(fullPath)}')
 from ${path.basename(scriptPath).replace('.py', '')} import ${functionName}
-result = ${functionName}(*${pythonArgs})
+result = ${functionName}(${pythonArgs})
 print(json.dumps(result))
-"`;
+`;
+    fs.writeFileSync(tempScript, pythonCode);
     
-    const output = execSync(command, { encoding: 'utf-8' });
+    const output = execSync(`python3 ${tempScript}`, { encoding: 'utf-8' });
+    
+    // Clean up temp file
+    fs.unlinkSync(tempScript);
+    
     const data = JSON.parse(output.trim());
     
     return { success: true, data };

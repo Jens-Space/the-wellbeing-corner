@@ -1,5 +1,5 @@
 """
-Python content generator for Mental Health Hub
+Python content generator for The Wellbeing Corner
 This module provides AI-powered content generation for mental health support.
 """
 

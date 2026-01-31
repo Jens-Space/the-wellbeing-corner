@@ -6,7 +6,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Mental Health Hub',
+  title: 'The Wellbeing Corner',
   description: 'An inclusive, compassionate website supporting adults, teens, and children with mental health education and resources.',
 }
 

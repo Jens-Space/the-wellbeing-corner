@@ -1,6 +1,6 @@
-# 🌱 Mental Health Hub
+# 🌱 The Wellbeing Corner
 
-Mental Health Hub is an inclusive, compassionate website built with **Next.js** and **Python**, designed to support **adults, teens, and children**, including those affected by **chronic pain, invisible illness, and mood disorders**.
+The Wellbeing Corner is an inclusive, compassionate website built with **Next.js** and **Python**, designed to support **adults, teens, and children**, including those affected by **chronic pain, invisible illness, and mood disorders**.
 
 This project focuses on education, validation, accessibility, and safe signposting — not diagnosis or treatment.
 
@@ -56,7 +56,7 @@ console.log(data.message); // "Take a deep breath. You're safe right now."
 
 ## 💙 Mission Statement
 
-Mental Health Hub exists to provide a safe, supportive space for people of all ages to learn about mental health and understand their experiences without judgement.
+The Wellbeing Corner exists to provide a safe, supportive space for people of all ages to learn about mental health and understand their experiences without judgement.
 
 Mental health is shaped by many factors — trauma, life events, chronic pain, invisible illness, disability, and social pressures. Whether struggles are visible or hidden, short-term or lifelong, every experience is valid.
 
