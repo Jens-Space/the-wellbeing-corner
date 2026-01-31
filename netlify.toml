@@ -5,8 +5,8 @@
   NODE_VERSION = "20"
 
 [[plugins]]
-  package = "@netlify/nextjs"
+  package = "@netlify/plugin-nextjs"
 
-# Optional: Configure Next.js to output static files
-[functions]
-  directory = "netlify/functions"
+# Optional: Static export settings (if using static export)
+# [context.production.environment]
+#   NEXT_TELEMETRY_DISABLED = "1"
