@@ -1,6 +1,6 @@
 # The Wellbeing Corner - Development Progress
 
-**Last Updated:** 2026-01-31T17:50:00.000Z (UTC)
+**Last Updated:** 2026-01-31T18:30:00.000Z (UTC)
 
 ## 🎯 Project Overview
 The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwind CSS. Focuses on education, validation, and safe signposting for mental health support.
@@ -62,6 +62,13 @@ The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwin
 - **Pages**: All 8 pages accessible and populated with content
 
 ## 📝 Recent Changes (Latest)
+- **2026-01-31T18:30:00.000Z**: Fixed mobile responsive buttons across all pages:
+  - Removed arrow symbols (←) from all navigation buttons (Back to Top, Back to Adult Support, Back to Teen Support)
+  - Updated buttons to use responsive sizing: `px-4 py-2` on mobile, `sm:px-6 sm:py-3` on larger screens
+  - Changed button layout to `flex flex-wrap justify-center gap-3` for better mobile wrapping
+  - All buttons now properly sized for mobile devices without horizontal scrolling
+  - Updated 13 pages: adults/grief, adults/invisible-illness, adults/chronic-pain, teens/depression, teens/body-image, teens/stress, teens/identity, teens/anxiety, teens/relationships, and previously fixed adults/stress, adults/anxiety, adults/depression, adults/ptsd pages
+
 - **2026-01-31T13:15:00.000Z**: Enhanced desktop/laptop version for improved readability and visual comfort:
   - **Layout Width:** Increased max-width from `max-w-7xl` to `max-w-7xl xl:max-w-8xl` in layout.tsx for more generous spacing on large screens
   - **Hero Section:** Added `lg:p-16` padding, increased heading to `lg:text-6xl`, body text to `lg:text-xl`, max-width to `lg:max-w-6xl`
