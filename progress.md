@@ -1,6 +1,6 @@
 # The Wellbeing Corner - Development Progress
 
-**Last Updated:** 2026-01-31T18:30:00.000Z (UTC)
+**Last Updated:** 2026-02-01T11:24:00.000Z (UTC)
 
 ## 🎯 Project Overview
 The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwind CSS. Focuses on education, validation, and safe signposting for mental health support.
@@ -62,6 +62,24 @@ The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwin
 - **Pages**: All 8 pages accessible and populated with content
 
 ## 📝 Recent Changes (Latest)
+- **2026-02-01T11:24:00.000Z**: Fixed navigation links for GitHub Pages deployment:
+  - Added basePath `/the-wellbeing-corner/` to all topic page links in adults/page.tsx
+  - Added basePath `/the-wellbeing-corner/` to all topic page links in teens/page.tsx
+  - Fixed links: /adults/depression → /the-wellbeing-corner/adults/depression
+  - Fixed links: /adults/anxiety → /the-wellbeing-corner/adults/anxiety
+  - Fixed links: /adults/ptsd → /the-wellbeing-corner/adults/ptsd
+  - Fixed links: /adults/stress → /the-wellbeing-corner/adults/stress
+  - Fixed links: /adults/grief → /the-wellbeing-corner/adults/grief
+  - Fixed links: /adults/chronic-pain → /the-wellbeing-corner/adults/chronic-pain
+  - Fixed links: /adults/invisible-illness → /the-wellbeing-corner/adults/invisible-illness
+  - Fixed links: /teens/anxiety → /the-wellbeing-corner/teens/anxiety
+  - Fixed links: /teens/depression → /the-wellbeing-corner/teens/depression
+  - Fixed links: /teens/stress → /the-wellbeing-corner/teens/stress
+  - Fixed links: /teens/identity → /the-wellbeing-corner/teens/identity
+  - Fixed links: /teens/relationships → /the-wellbeing-corner/teens/relationships
+  - Fixed links: /teens/body-image → /the-wellbeing-corner/teens/body-image
+  - Successfully deployed to GitHub Pages: https://jens-space.github.io/the-wellbeing-corner/
+
 - **2026-01-31T18:30:00.000Z**: Fixed mobile responsive buttons across all pages:
   - Removed arrow symbols (←) from all navigation buttons (Back to Top, Back to Adult Support, Back to Teen Support)
   - Updated buttons to use responsive sizing: `px-4 py-2` on mobile, `sm:px-6 sm:py-3` on larger screens

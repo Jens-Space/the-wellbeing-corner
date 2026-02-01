@@ -19,43 +19,43 @@ export default function AdultsPage() {
         </h2>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">Click on any topic below to explore detailed information, self-help strategies, and available support services.</p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <a href="/adults/depression" className="block bg-gradient-to-br from-yellow-50 to-orange-50 hover:bg-yellow-100 border border-yellow-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/adults/depression" className="block bg-gradient-to-br from-yellow-50 to-orange-50 hover:bg-yellow-100 border border-yellow-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center">
               <span className="mr-2">😔</span> Depression & Low Mood
             </h3>
             <p className="text-gray-700">Understanding depression, symptoms, and recovery strategies</p>
           </a>
-          <a href="/adults/anxiety" className="block bg-gradient-to-br from-green-50 to-emerald-50 hover:bg-green-100 border border-green-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/adults/anxiety" className="block bg-gradient-to-br from-green-50 to-emerald-50 hover:bg-green-100 border border-green-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-xl font-bold text-green-800 mb-3 flex items-center">
               <span className="mr-2">😰</span> Anxiety & Panic
             </h3>
             <p className="text-gray-700">Managing anxiety disorders and panic attacks</p>
           </a>
-          <a href="/adults/ptsd" className="block bg-gradient-to-br from-purple-50 to-indigo-50 hover:bg-purple-100 border border-purple-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/adults/ptsd" className="block bg-gradient-to-br from-purple-50 to-indigo-50 hover:bg-purple-100 border border-purple-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-xl font-bold text-purple-800 mb-3 flex items-center">
               <span className="mr-2">🌪️</span> PTSD & Trauma
             </h3>
             <p className="text-gray-700">Healing from trauma and post-traumatic stress</p>
           </a>
-          <a href="/adults/stress" className="block bg-gradient-to-br from-orange-50 to-red-50 hover:bg-orange-100 border border-orange-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/adults/stress" className="block bg-gradient-to-br from-orange-50 to-red-50 hover:bg-orange-100 border border-orange-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-xl font-bold text-orange-800 mb-3 flex items-center">
               <span className="mr-2">⚡</span> Stress & Burnout
             </h3>
             <p className="text-gray-700">Coping with stress and preventing burnout</p>
           </a>
-          <a href="/adults/grief" className="block bg-gradient-to-br from-cyan-50 to-blue-50 hover:bg-cyan-100 border border-cyan-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/adults/grief" className="block bg-gradient-to-br from-cyan-50 to-blue-50 hover:bg-cyan-100 border border-cyan-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-xl font-bold text-cyan-800 mb-3 flex items-center">
               <span className="mr-2">💔</span> Grief & Loss
             </h3>
             <p className="text-gray-700">Navigating bereavement and loss</p>
           </a>
-          <a href="/adults/chronic-pain" className="block bg-gradient-to-br from-red-50 to-pink-50 hover:bg-red-100 border border-red-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/adults/chronic-pain" className="block bg-gradient-to-br from-red-50 to-pink-50 hover:bg-red-100 border border-red-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-xl font-bold text-red-800 mb-3 flex items-center">
               <span className="mr-2">🤕</span> Chronic Pain & Mental Health
             </h3>
             <p className="text-gray-700">Managing mental health with chronic conditions</p>
           </a>
-          <a href="/adults/invisible-illness" className="block bg-gradient-to-br from-lime-50 to-green-50 hover:bg-lime-100 border border-lime-200 rounded-xl p-6 transition-colors duration-200 shadow-md md:col-span-2 lg:col-span-1">
+          <a href="/the-wellbeing-corner/adults/invisible-illness" className="block bg-gradient-to-br from-lime-50 to-green-50 hover:bg-lime-100 border border-lime-200 rounded-xl p-6 transition-colors duration-200 shadow-md md:col-span-2 lg:col-span-1">
             <h3 className="text-xl font-bold text-lime-800 mb-3 flex items-center">
               <span className="mr-2">👻</span> Invisible Illness
             </h3>

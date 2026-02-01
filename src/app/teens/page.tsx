@@ -18,37 +18,37 @@ export default function TeensPage() {
         </h2>
         <p className="text-base md:text-lg text-gray-700 mb-4 md:mb-8 leading-relaxed">Click on any topic below to explore detailed information, self-help strategies, and available support services.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <a href="/teens/anxiety" className="block bg-gradient-to-br from-blue-50 to-cyan-50 hover:bg-blue-100 border border-blue-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/teens/anxiety" className="block bg-gradient-to-br from-blue-50 to-cyan-50 hover:bg-blue-100 border border-blue-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-lg md:text-xl font-bold text-blue-800 mb-2 flex items-center">
               <span className="mr-2">😰</span> Anxiety & Worry
             </h3>
             <p className="text-gray-700 text-sm md:text-base">Managing anxiety and excessive worry</p>
           </a>
-          <a href="/teens/depression" className="block bg-gradient-to-br from-green-50 to-emerald-50 hover:bg-green-100 border border-green-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/teens/depression" className="block bg-gradient-to-br from-green-50 to-emerald-50 hover:bg-green-100 border border-green-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-lg md:text-xl font-bold text-green-800 mb-2 flex items-center">
               <span className="mr-2">😔</span> Depression & Low Mood
             </h3>
             <p className="text-gray-700 text-sm md:text-base">Understanding depression and recovery</p>
           </a>
-          <a href="/teens/stress" className="block bg-gradient-to-br from-purple-50 to-violet-50 hover:bg-purple-100 border border-purple-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/teens/stress" className="block bg-gradient-to-br from-purple-50 to-violet-50 hover:bg-purple-100 border border-purple-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-lg md:text-xl font-bold text-purple-800 mb-2 flex items-center">
               <span className="mr-2">📚</span> School & Exam Stress
             </h3>
             <p className="text-gray-700 text-sm md:text-base">Coping with academic pressure</p>
           </a>
-          <a href="/teens/identity" className="block bg-gradient-to-br from-orange-50 to-yellow-50 hover:bg-orange-100 border border-orange-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/teens/identity" className="block bg-gradient-to-br from-orange-50 to-yellow-50 hover:bg-orange-100 border border-orange-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-lg md:text-xl font-bold text-orange-800 mb-2 flex items-center">
               <span className="mr-2">🌈</span> Identity & Self-Discovery
             </h3>
             <p className="text-gray-700 text-sm md:text-base">Exploring who you are</p>
           </a>
-          <a href="/teens/relationships" className="block bg-gradient-to-br from-pink-50 to-rose-50 hover:bg-pink-100 border border-pink-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/teens/relationships" className="block bg-gradient-to-br from-pink-50 to-rose-50 hover:bg-pink-100 border border-pink-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-lg md:text-xl font-bold text-pink-800 mb-2 flex items-center">
               <span className="mr-2">👥</span> Relationships & Friendships
             </h3>
             <p className="text-gray-700 text-sm md:text-base">Navigating social connections</p>
           </a>
-          <a href="/teens/body-image" className="block bg-gradient-to-br from-lime-50 to-green-50 hover:bg-lime-100 border border-lime-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
+          <a href="/the-wellbeing-corner/teens/body-image" className="block bg-gradient-to-br from-lime-50 to-green-50 hover:bg-lime-100 border border-lime-200 rounded-xl p-4 md:p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-lg md:text-xl font-bold text-lime-800 mb-2 flex items-center">
               <span className="mr-2">✨</span> Body Image & Self-Esteem
             </h3>
