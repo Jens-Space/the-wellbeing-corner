@@ -3,8 +3,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   // GitHub Pages uses a subdirectory by default (e.g., /repo-name)
-  // Uncomment and set this if deploying to a custom subdirectory
-  // basePath: '/your-repo-name',
+  basePath: '/the-wellbeing-corner',
   images: {
     unoptimized: true, // Required for static export
   },
