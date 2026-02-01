@@ -1,56 +1,135 @@
 # 🌱 The Wellbeing Corner
 
-The Wellbeing Corner is an inclusive, compassionate website built with **Next.js** and **Python**, designed to support **adults, teens, and children**, including those affected by **chronic pain, invisible illness, and mood disorders**.
+The Wellbeing Corner is an inclusive, compassionate website built with **Next.js**, designed to support **adults, teens, and children**, including those affected by **chronic pain, invisible illness, and mood disorders**.
 
 This project focuses on education, validation, accessibility, and safe signposting — not diagnosis or treatment.
 
 ---
 
-## 🐍 Python Integration
+## 🚀 Deployment on GitHub Pages
 
-This project uses **Python** alongside Next.js to generate dynamic content. The Python scripts handle content generation for:
+This project is configured for static export and can be deployed to GitHub Pages.
 
-- Motivational messages
-- Wellness tips
-- Resource recommendations
-- Topic overviews
+### Prerequisites
 
-### Python Scripts Location
+1. **Node.js** (v18 or higher)
+2. **Git** installed
 
-All Python scripts are located in `src/python/`:
+### Installation
 
-- `content_generator.py` - Main content generation module
+```bash
+# Install dependencies
+npm install
 
-### API Routes
-
-Python functions are exposed via Next.js API routes:
-
-| Endpoint | Purpose |
-|----------|---------|
-| `/api/motivational?category=<category>` | Get motivational messages (general, anxiety, depression, stress, teens) |
-| `/api/resources?topic=<topic>&ageGroup=<adults|teens>` | Get resource recommendations |
-| `/api/wellness-tip` | Get random wellness tips |
-| `/api/topic?topic=<topic>` | Get topic overviews |
-
-### How It Works
-
-1. Python scripts define content generation functions
-2. Next.js API routes call these functions using `child_process`
-3. Frontend pages fetch from API routes to display Python-generated content
-
-### Example Usage
-
-```typescript
-// Fetch motivational message from Python
-const response = await fetch('/api/motivational?category=anxiety');
-const data = await response.json();
-console.log(data.message); // "Take a deep breath. You're safe right now."
+# Install gh-pages for deployment
+npm install -D gh-pages
 ```
 
-### Requirements
+### Development
 
-- Python 3.x must be installed
-- `python3` command must be available in PATH
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+This generates static files in the `out` directory.
+
+### Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+This command will:
+1. Build the static site
+2. Deploy the contents of the `out` directory to the `gh-pages` branch
+
+### Manual Deployment
+
+If you prefer manual deployment:
+
+```bash
+# Build the static site
+npm run build
+
+# Deploy to gh-pages branch
+npx gh-pages -d out
+```
+
+### GitHub Actions (Optional)
+
+To set up automatic deployment on push, create `.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+Then enable GitHub Pages in your repository settings:
+- Go to Settings → Pages
+- Source: Select "GitHub Actions"
+
+### Custom Domain (Optional)
+
+If using a custom domain, create a `CNAME` file in the root directory:
+
+```
+yourdomain.com
+```
+
+Then in `next.config.js`, uncomment and set:
+
+```javascript
+basePath: '/your-repo-name',
+```
 
 ---
 
@@ -77,7 +156,6 @@ Our mission is to reduce stigma, increase understanding, and remind people that 
 * Neurodivergent mental health experiences
 * Mental health linked to chronic pain and invisible illness
 * UK-based crisis and support resources
-* Optional, ethical AI-powered guidance
 
 ---
 
@@ -92,7 +170,6 @@ Our mission is to reduce stigma, increase understanding, and remind people that 
 | Mood Disorders              | `/mood-disorders`  |
 | Chronic & Invisible Illness | `/chronic-illness` |
 | UK Resources                | `/resources`       |
-| AI Support Tool             | `/ai-support`      |
 
 ---
 
@@ -160,7 +237,7 @@ To help children understand emotions in a gentle way and support parents and car
 
 ### For Parents & Carers
 
-* Supporting children’s mental health
+* Supporting children's mental health
 * Talking about difficult topics
 * Supporting children with illness or disability
 
@@ -258,37 +335,6 @@ Physical and mental health are deeply connected. Struggling emotionally due to i
 
 ---
 
-## 🤖 AI Support Page (`/ai-support`)
-
-### Purpose
-
-An optional, supportive AI tool designed to guide users toward helpful content and trusted resources.
-
-### What the AI Can Do
-
-* Help users find relevant sections
-* Suggest grounding and self-care tools
-* Provide age-appropriate responses
-* Encourage real-world support
-
-### What the AI Will Not Do
-
-* Diagnose mental health conditions
-* Replace professional care
-* Store personal conversations
-* Provide medical advice
-
-### Safety Rules
-
-* Never diagnose or label conditions
-* Never minimise feelings
-* Always encourage human support
-* Adjust tone, language, and examples based on age context
-* If a user appears to be a child or teen, gently encourage trusted adult involvement
-* Escalate crisis content immediately
-
----
-
 ## ♿ Accessibility Features
 
 * High-contrast colour options
@@ -304,4 +350,3 @@ An optional, supportive AI tool designed to guide users toward helpful content a
 ## 📄 Disclaimer
 
 This website provides educational and supportive information only and is not a substitute for professional mental health care.
-
