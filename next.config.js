@@ -3,7 +3,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   // GitHub Pages uses a subdirectory by default (e.g., /repo-name)
-  basePath: '/ai_mental_health_hub',
+  basePath: '/the-wellbeing-corner',
   images: {
     unoptimized: true, // Required for static export
   },
