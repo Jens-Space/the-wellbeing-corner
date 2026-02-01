@@ -6,10 +6,9 @@ export default function AdultsPage() {
   return (
     <div id="top" className="space-y-12">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-primary-700 mb-4">🧠 Adult Support</h1>
+        <h1 className="text-4xl font-bold text-primary-700 mb-4">🌱 Your Mental Health Journey</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Support for adults experiencing mental health challenges related to life stress, trauma, physical health,
-          relationships, parenting, work, or long-term conditions.
+          Compassionate support for navigating life's challenges - you're not alone.
         </p>
       </div>
 
