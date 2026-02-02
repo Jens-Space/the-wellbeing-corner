@@ -5,11 +5,12 @@ import Link from 'next/link';
 export default function AdultsPage() {
   return (
     <div id="top" className="space-y-12">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-primary-700 mb-4">🌱 Your Mental Health Journey</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-6 md:p-8 text-center shadow-lg">
+        <h1 className="text-3xl md:text-5xl font-bold text-green-800 mb-3 md:mb-4">🌱 Your Mental Health Journey</h1>
+        <p className="text-base md:text-xl text-gray-700 max-w-4xl mx-auto mb-4">
           Compassionate support for navigating life's challenges - you're not alone.
         </p>
+        <p className="text-base md:text-lg text-gray-600">Understanding, guidance, and clear signposting to professional help when needed.</p>
       </div>
 
       <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg p-8 border border-blue-100">
