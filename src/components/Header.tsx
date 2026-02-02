@@ -19,8 +19,8 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="text-xl md:text-2xl font-bold text-primary-700 flex items-center gap-2 flex-shrink-0">
-            🌱 The Wellbeing Corner
+          <Link href="/" className="text-xl md:text-2xl font-bold bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent flex items-center gap-2 flex-shrink-0 hover:scale-105 transition-transform duration-200">
+            🌿 The Wellbeing Corner
           </Link>
 
           {/* Desktop Menu */}
