@@ -5,11 +5,12 @@ import Link from 'next/link';
 export default function TeensPage() {
   return (
     <div id="top" className="space-y-8 md:space-y-12">
-      <div className="text-center px-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary-700 mb-3 md:mb-4">🌟 Hey There! Your Space for Support</h1>
-        <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
+      <div className="bg-gradient-to-br from-blue-50 to-cyan-100 rounded-xl p-6 md:p-8 text-center shadow-lg">
+        <h1 className="text-3xl md:text-5xl font-bold text-blue-800 mb-3 md:mb-4">🌟 Hey There! Your Space for Support</h1>
+        <p className="text-base md:text-xl text-gray-700 max-w-4xl mx-auto mb-4">
           Support for teenagers navigating mental health challenges, identity, relationships, and the pressures of growing up.
         </p>
+        <p className="text-base md:text-lg text-gray-600">Gentle strategies, understanding, and clear signposting to professional help when needed.</p>
       </div>
 
       <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg p-5 md:p-8 border border-blue-100">
