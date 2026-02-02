@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const menuItems = [
+  { href: '/', label: '🏠 Home' },
   { href: '/adults', label: 'For Adults' },
   { href: '/teens', label: 'For Teens' },
   { href: '/children', label: 'For Families' },
@@ -28,7 +29,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-primary-600 hover:bg-primary-50 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors whitespace-nowrap"
+                className="text-gray-700 hover:text-green-700 hover:bg-green-50 px-4 py-2 rounded-full text-sm lg:text-base font-medium transition-all duration-200 whitespace-nowrap shadow-sm hover:shadow-md"
               >
                 {item.label}
               </Link>
@@ -60,7 +61,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50 transition-colors"
+                  className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-green-700 hover:bg-green-50 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
