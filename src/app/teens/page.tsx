@@ -6,7 +6,7 @@ export default function TeensPage() {
   return (
     <div id="top" className="space-y-8 md:space-y-12">
       <div className="text-center px-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary-700 mb-3 md:mb-4">🧠 Teen Support</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-primary-700 mb-3 md:mb-4">🌟 Hey There! Your Space for Support</h1>
         <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
           Support for teenagers navigating mental health challenges, identity, relationships, and the pressures of growing up.
         </p>
