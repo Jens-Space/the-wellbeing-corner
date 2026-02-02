@@ -1,6 +1,6 @@
 # The Wellbeing Corner - Development Progress
 
-**Last Updated:** 2026-02-01T11:35:00.000Z (UTC)
+**Last Updated:** 2026-02-02T16:58:00.000Z (UTC)
 
 ## 🎯 Project Overview
 The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwind CSS. Focuses on education, validation, and safe signposting for mental health support.
@@ -62,12 +62,26 @@ The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwin
 - **Pages**: All 8 pages accessible and populated with content
 
 ## 📝 Recent Changes (Latest)
-- **2026-02-01T11:35:00.000Z**: Updated page titles to be more friendly and compassionate:
-  - Updated Adults page title: "🧠 Adult Support" → "🌱 Your Mental Health Journey"
-  - Updated Adults page subtitle: Now reads "Compassionate support for navigating life's challenges - you're not alone."
-  - Updated PTSD page title: "PTSD and Trauma" → "🌪️ Healing from Trauma & PTSD"
-  - Updated PTSD page subtitle: "Understanding trauma responses and finding compassionate paths toward healing."
-  - Successfully deployed to GitHub Pages with all title updates
+- **2026-02-02T16:58:00.000Z**: Made multiple design improvements to create a friendlier, more colorful website:
+  - **Teen Page Title Update**: Changed from "🧠 Teen Support" to "🌟 Hey There! Your Space for Support" for warmer, more welcoming tone
+  - **Teen Page Styling**: Added blue/cyan gradient hero section with larger title (text-5xl), additional tagline "Gentle strategies, understanding, and clear signposting to professional help when needed."
+  - **Adult Page Styling**: Added green/emerald gradient hero section with larger title (text-5xl), additional tagline "Understanding, guidance, and clear signposting to professional help when needed."
+  - **Header Redesign**: 
+    - Added Home button (🏠 Home) to navigation menu
+    - Changed menu buttons to colorful pill-shaped buttons with unique colors per section:
+      - Home: Blue button
+      - For Adults: Green button
+      - For Teens: Purple button
+      - For Families: Orange button
+      - Get Help: Red button
+    - Changed from plain links to colorful buttons with shadow effects and hover animations
+  - **Logo Enhancement**: 
+    - Changed emoji from 🌱 to 🌿
+    - Added gradient text effect (green → emerald → teal)
+    - Added subtle scale animation on hover
+  - **Removed Logo Link**: Changed logo from Link component to span element, making it a visual element rather than a clickable link
+  - **Manual Deployment**: Set up manual deployment workflow using `npm run deploy` (gh-pages) instead of GitHub Actions
+  - All changes committed and deployed to live site
   - Live URL: https://jens-space.github.io/the-wellbeing-corner/
 
 - **2026-02-01T11:24:00.000Z**: Fixed navigation links for GitHub Pages deployment:
@@ -251,9 +265,10 @@ The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwin
 - **2026-01-28T10:41:29.432Z**: Updated home page design to be more fun and welcoming with additional colors and animations. Removed navigation table section for cleaner presentation.
 
 ## 🔄 Next Steps
-- Test all pages for functionality
+- Continue testing all pages for functionality
 - Consider adding more interactive elements if needed
-- Prepare for deployment when ready
+- Explore additional design improvements based on user feedback
+- Regular deployment and content updates
 
 ---
 *This progress file documents the development journey of The Wellbeing Corner website.*
