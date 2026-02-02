@@ -4,11 +4,11 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const menuItems = [
-  { href: '/', label: '🏠 Home' },
-  { href: '/adults', label: 'For Adults' },
-  { href: '/teens', label: 'For Teens' },
-  { href: '/children', label: 'For Families' },
-  { href: '/resources', label: 'Get Help' },
+  { href: '/', label: 'Home', color: 'bg-blue-500 hover:bg-blue-600 text-white' },
+  { href: '/adults', label: 'For Adults', color: 'bg-green-500 hover:bg-green-600 text-white' },
+  { href: '/teens', label: 'For Teens', color: 'bg-purple-500 hover:bg-purple-600 text-white' },
+  { href: '/children', label: 'For Families', color: 'bg-orange-500 hover:bg-orange-600 text-white' },
+  { href: '/resources', label: 'Get Help', color: 'bg-red-500 hover:bg-red-600 text-white' },
 ]
 
 export default function Header() {
@@ -29,7 +29,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-green-700 hover:bg-green-50 px-4 py-2 rounded-full text-sm lg:text-base font-medium transition-all duration-200 whitespace-nowrap shadow-sm hover:shadow-md"
+                className={`px-4 py-2 rounded-full text-sm lg:text-base font-medium transition-all duration-200 whitespace-nowrap shadow-md hover:shadow-lg transform hover:-translate-y-0.5 ${item.color}`}
               >
                 {item.label}
               </Link>
@@ -56,12 +56,12 @@ export default function Header() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
-            <div className="space-y-1">
+            <div className="space-y-2">
               {menuItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 hover:text-green-700 hover:bg-green-50 transition-colors"
+                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${item.color}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
