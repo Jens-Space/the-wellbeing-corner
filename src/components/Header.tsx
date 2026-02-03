@@ -8,6 +8,7 @@ const menuItems = [
   { href: '/teens', label: 'For Teens', color: 'bg-violet-100 hover:bg-violet-200 border-violet-400' },
   { href: '/children', label: 'For Families', color: 'bg-amber-100 hover:bg-amber-200 border-amber-400' },
   { href: '/resources', label: 'Get Help', color: 'bg-teal-100 hover:bg-teal-200 border-teal-400' },
+  { href: '/feedback', label: 'Feedback', color: 'bg-rose-100 hover:bg-rose-200 border-rose-400' },
 ]
 
 export default function Header() {
