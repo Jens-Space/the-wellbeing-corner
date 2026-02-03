@@ -2,53 +2,62 @@
 
 import { useState } from 'react';
 
-// Replace with your Formspree endpoint URL after creating a free account at formspree.io
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/your-form-id';
-
 export default function FeedbackPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    feedbackType: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError('');
-
-    try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-      } else {
-        setError('There was a problem submitting your feedback. Please try again.');
-      }
-    } catch (err) {
-      // If Formspree is not configured, log to console for testing
-      console.log('Feedback submitted (test mode):', formData);
-      setSubmitted(true);
-    }
-
-    setIsSubmitting(false);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+
+    try {
+      // Using FormSubmit.co - emails will be sent to the email in the form
+      const response = await fetch('https://formsubmit.co/ajax/jenniferellen1992@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'New Feedback from The Wellbeing Corner',
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success === 'true' || response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setError('Failed to send feedback. Please try again.');
+      }
+    } catch (err) {
+      setError('Error sending feedback. Please try again.');
+      console.error('Error:', err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -79,97 +88,66 @@ export default function FeedbackPage() {
 
   return (
     <div id="top" className="space-y-12">
-      <div className="bg-gradient-to-br from-purple-50 to-indigo-100 rounded-xl p-6 md:p-8 text-center shadow-lg">
-        <h1 className="text-3xl md:text-5xl font-bold text-purple-800 mb-3 md:mb-4">Share Your Feedback</h1>
-        <p className="text-base md:text-xl text-gray-700 max-w-4xl mx-auto mb-4">
-          Help us improve The Wellbeing Corner by sharing your thoughts, suggestions, or experiences.
-        </p>
-        <p className="text-base md:text-lg text-gray-600">We value your input and are committed to making this resource as helpful as possible.</p>
-      </div>
-
-      <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-8 border border-gray-200">
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Your Name (optional)
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-                placeholder="Enter your name"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Your Email (optional)
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-                placeholder="Enter your email"
-              />
-            </div>
-          </div>
-
+      <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 rounded-2xl shadow-md border-2 border-purple-200 p-8">
+        <div className="text-center mb-6">
+          <span className="text-5xl inline-block mb-3">💬</span>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-800 mb-2">We'd Love Your Feedback! 💜</h2>
+          <p className="text-gray-600 text-lg">Your thoughts, suggestions, and ideas help us create a better space for everyone. We're listening!</p>
+        </div>
+        
+        <form onSubmit={handleSubmit} className="space-y-4 max-w-2xl mx-auto">
           <div>
-            <label htmlFor="feedbackType" className="block text-sm font-medium text-gray-700 mb-2">
-              Feedback Type
-            </label>
-            <select
-              id="feedbackType"
-              name="feedbackType"
-              value={formData.feedbackType}
+            <label className="block text-gray-700 font-semibold mb-2">Your Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="What should we call you?"
+              value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-            >
-              <option value="">Select feedback type</option>
-              <option value="general">General Feedback</option>
-              <option value="suggestion">Suggestion for Improvement</option>
-              <option value="bug">Report an Issue</option>
-              <option value="content">Content Feedback</option>
-              <option value="experience">Share Your Experience</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-              Your Feedback
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={6}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-              placeholder="Share your thoughts, suggestions, or experiences with us..."
+              className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all bg-white"
             />
           </div>
-
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={`px-8 py-3 text-white font-medium rounded-lg transition-colors focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-purple-600 hover:bg-purple-700'}`}
-            >
-              {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
-            </button>
+          
+          <div>
+            <label className="block text-gray-700 font-semibold mb-2">Your Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="So we can get back to you"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all bg-white"
+            />
           </div>
+          
+          <div>
+            <label className="block text-gray-700 font-semibold mb-2">Your Feedback or Ideas</label>
+            <textarea
+              name="message"
+              placeholder="Tell us what you think! Share your ideas, suggestions, or just let us know how we're doing..."
+              value={formData.message}
+              onChange={handleChange}
+              rows={5}
+              required
+              className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all resize-none bg-white"
+            />
+          </div>
+          
           {error && (
-            <p className="text-center text-red-600 mt-4">{error}</p>
+            <div className="p-4 bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 rounded-xl">
+              <p className="text-red-700 font-bold text-center">{error}</p>
+            </div>
           )}
+          
+          <button 
+            type="submit"
+            disabled={loading}
+            className="w-full px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg rounded-xl hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 disabled:from-gray-400 disabled:to-gray-400 disabled:cursor-not-allowed disabled:scale-100 shadow-lg"
+          >
+            {loading ? '✨ Sending your feedback...' : '📨 Send Feedback'}
+          </button>
         </form>
       </div>
 
@@ -181,14 +159,14 @@ export default function FeedbackPage() {
         <ul className="space-y-2 text-gray-700 ml-4">
           <li>• We do not share your personal information with third parties</li>
           <li>• Feedback submitted here is not monitored in real-time</li>
-          <li>• If you need immediate support, please use our <a href="/the-wellbeing-corner/resources" className="text-purple-600 hover:text-purple-800 underline">UK Resources</a> page</li>
+          <li>• If you need immediate support, please use our <a href="/resources" className="text-purple-600 hover:text-purple-800 underline">UK Resources</a> page</li>
           <li>• For urgent mental health support, contact Samaritans on 116 123</li>
         </ul>
       </div>
 
       <div className="flex flex-wrap justify-center gap-3 mt-6">
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={scrollToTop}
           className="px-4 py-2 sm:px-6 sm:py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm sm:text-base"
         >
           Back to Top
@@ -198,5 +176,5 @@ export default function FeedbackPage() {
         </a>
       </div>
     </div>
-  )
+  );
 }

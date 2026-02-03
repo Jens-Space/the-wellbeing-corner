@@ -350,3 +350,5 @@ Physical and mental health are deeply connected. Struggling emotionally due to i
 ## 📄 Disclaimer
 
 This website provides educational and supportive information only and is not a substitute for professional mental health care.
+
+This website provides educational and supportive information only and is not a substitute for professional mental health care.
