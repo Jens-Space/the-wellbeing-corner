@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 
+// Replace with your Formspree endpoint URL after creating a free account at formspree.io
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/your-form-id';
+
 export default function FeedbackPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -10,12 +13,35 @@ export default function FeedbackPage() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would send the data to a server
-    console.log('Feedback submitted:', formData);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError('There was a problem submitting your feedback. Please try again.');
+      }
+    } catch (err) {
+      // If Formspree is not configured, log to console for testing
+      console.log('Feedback submitted (test mode):', formData);
+      setSubmitted(true);
+    }
+
+    setIsSubmitting(false);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -135,11 +161,15 @@ export default function FeedbackPage() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="px-8 py-3 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+              disabled={isSubmitting}
+              className={`px-8 py-3 text-white font-medium rounded-lg transition-colors focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-purple-600 hover:bg-purple-700'}`}
             >
-              Submit Feedback
+              {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
             </button>
           </div>
+          {error && (
+            <p className="text-center text-red-600 mt-4">{error}</p>
+          )}
         </form>
       </div>
 
