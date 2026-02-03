@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function FeedbackPage() {
   const [formData, setFormData] = useState({
@@ -78,9 +79,9 @@ export default function FeedbackPage() {
           >
             Submit Another Feedback
           </button>
-          <a href="/" className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm sm:text-base">
+          <Link href="/" className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm sm:text-base">
             Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -177,7 +178,7 @@ export default function FeedbackPage() {
         <ul className="space-y-2 text-gray-700 ml-4">
           <li>• We do not share your personal information with third parties</li>
           <li>• Feedback submitted here is not monitored in real-time</li>
-          <li>• If you need immediate support, please use our <a href="/resources" className="text-purple-600 hover:text-purple-800 underline">UK Resources</a> page</li>
+          <li>• If you need immediate support, please use our <Link href="/resources" className="text-purple-600 hover:text-purple-800 underline">UK Resources</Link> page</li>
           <li>• For urgent mental health support, contact Samaritans on 116 123</li>
         </ul>
       </div>
@@ -189,9 +190,9 @@ export default function FeedbackPage() {
         >
           Back to Top
         </button>
-        <a href="/" className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm sm:text-base">
+        <Link href="/" className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm sm:text-base">
           Back to Home
-        </a>
+        </Link>
       </div>
     </div>
   );

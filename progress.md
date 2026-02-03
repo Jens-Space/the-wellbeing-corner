@@ -1,6 +1,6 @@
 # The Wellbeing Corner - Development Progress
 
-**Last Updated:** 2026-02-03T18:36:00.000Z (UTC)
+**Last Updated:** 2026-02-03T19:43:00.000Z (UTC)
 
 ## 🎯 Project Overview
 The Wellbeing Corner website built with Next.js, TypeScript, and Tailwind CSS. Focuses on education, validation, and safe signposting for mental health support.
@@ -55,15 +55,15 @@ The Wellbeing Corner website built with Next.js, TypeScript, and Tailwind CSS. F
 
 ## 📝 Recent Changes (Latest)
 
-### 2026-02-03: Feedback Page Added
-- **Created Feedback Page** (`/feedback`)
-  - Added form with name, email, and feedback fields
-  - Uses Formsubmit.co to send submissions to jenniferellen1992@gmail.com
-  - Purple/pink gradient design with emoji header
-  - Success message displayed after submission
-  - Privacy notice included with guidance on data handling
-  - Added "Feedback" button to navigation header (rose-colored)
-  - Styled consistently with other pages using purple gradient theme
+### 2026-02-03: Feedback Page Enhanced
+- **Updated Feedback Page** (`/feedback`)
+  - Now uses Formsubmit.co JSON endpoint for reliable form submission
+  - Added feedback type dropdown with options: General Feedback, Bug Report, Feature Request, Content Suggestion, Other
+  - Email now includes feedback type and website identification in message body
+  - Added loading state while submitting
+  - Added error handling with user-friendly messages
+  - Success message with option to submit another feedback
+  - Styled consistently with purple gradient theme
 - **Added Mood Disorders and Eating Disorders pages for adults**
   - Created `/adults/mood-disorders` page covering bipolar disorder, cyclothymic disorder, with signs/symptoms, self-help strategies, treatment options, and UK resources
   - Created `/adults/eating-disorders` page covering anorexia, bulimia, binge eating, OSFED with warning signs, recovery support, treatment options, and Beat Eating Disorders helpline

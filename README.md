@@ -347,8 +347,20 @@ Physical and mental health are deeply connected. Struggling emotionally due to i
 
 ---
 
-## 📄 Disclaimer
+## 💬 Feedback Form
 
-This website provides educational and supportive information only and is not a substitute for professional mental health care.
+A feedback form is available at `/feedback` for visitors to share their thoughts, suggestions, or report issues.
+
+### Features
+
+* Name and email fields (optional for anonymous feedback)
+* Feedback type selection: General Feedback, Bug Report, Feature Request, Content Suggestion, Other
+* Uses Formsubmit.co for reliable email delivery
+* Privacy notice included
+* Confirmation message after submission
+
+---
+
+## 📄 Disclaimer
 
 This website provides educational and supportive information only and is not a substitute for professional mental health care.
