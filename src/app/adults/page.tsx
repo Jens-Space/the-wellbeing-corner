@@ -61,6 +61,18 @@ export default function AdultsPage() {
             </h3>
             <p className="text-gray-700">Living with conditions others can't see</p>
           </a>
+          <a href="/the-wellbeing-corner/adults/mood-disorders" className="block bg-gradient-to-br from-indigo-50 to-blue-50 hover:bg-indigo-100 border border-indigo-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
+            <h3 className="text-xl font-bold text-indigo-800 mb-3 flex items-center">
+              <span className="mr-2">🎢</span> Mood Disorders
+            </h3>
+            <p className="text-gray-700">Understanding bipolar disorder and mood swings</p>
+          </a>
+          <a href="/the-wellbeing-corner/adults/eating-disorders" className="block bg-gradient-to-br from-rose-50 to-pink-50 hover:bg-rose-100 border border-rose-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
+            <h3 className="text-xl font-bold text-rose-800 mb-3 flex items-center">
+              <span className="mr-2">🍽️</span> Eating Disorders
+            </h3>
+            <p className="text-gray-700">Support for anorexia, bulimia, and binge eating</p>
+          </a>
         </div>
       </div>
 
