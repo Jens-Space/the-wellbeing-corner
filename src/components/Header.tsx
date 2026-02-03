@@ -16,8 +16,8 @@ export default function Header() {
   return (
     <nav className="px-4 py-2 bg-white">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-3">
-          {/* Logo */}
+        {/* Logo - always centered */}
+        <div className="flex justify-center mb-3 lg:mb-0">
           <Link href="/" aria-label="The Wellbeing Corner Home">
             <img
               src="/the-wellbeing-corner/logo.png"
@@ -26,8 +26,10 @@ export default function Header() {
               style={{ width: '400px', height: 'auto' }}
             />
           </Link>
+        </div>
 
-          {/* Desktop Menu */}
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-3">
+          {/* Desktop Menu - hidden on smaller screens */}
           <div className="hidden lg:flex gap-2">
             <ul className="flex gap-2">
               {menuItems.map((item) => (
@@ -43,7 +45,7 @@ export default function Header() {
             </ul>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - only on smaller screens */}
           <button
             className="lg:hidden p-2 text-purple-600 bg-purple-100 rounded-full hover:bg-purple-200 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -53,9 +55,9 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-sm mt-2 pb-4 rounded-xl shadow-lg border border-purple-200 mx-2">
+          <div className="lg:hidden bg-white/95 backdrop-blur-sm mt-3 pb-4 rounded-xl shadow-lg border border-purple-200 mx-2">
             <ul className="space-y-2 px-2 text-center">
               {menuItems.map((item) => (
                 <li key={item.href}>
