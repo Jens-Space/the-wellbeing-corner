@@ -21,7 +21,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" aria-label="The Wellbeing Corner Home" className="flex items-center justify-center">
             <img
-              src="/the-wellbeing-corner/logo.png"
+              src="/logo.png"
               alt="The Wellbeing Corner Logo"
               className="object-contain cursor-pointer hover:opacity-90 transition-opacity"
               style={{ width: '280px', height: 'auto' }}
