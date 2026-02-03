@@ -1,6 +1,6 @@
 # The Wellbeing Corner - Development Progress
 
-**Last Updated:** 2026-02-03T18:05:00.000Z (UTC)
+**Last Updated:** 2026-02-03T18:16:00.000Z (UTC)
 
 ## 🎯 Project Overview
 The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwind CSS. Focuses on education, validation, and safe signposting for mental health support.
@@ -62,7 +62,10 @@ The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwin
 - **Pages**: All 8 pages accessible and populated with content
 
 ## 📝 Recent Changes (Latest)
-- **2026-02-03T18:05:00.000Z**: Menu bar refinements:
+- **2026-02-03T18:16:00.000Z**: Added new mental health topic pages for adults:
+  - **Mood Disorders Page** (`/adults/mood-disorders`): Comprehensive page covering bipolar disorder, cyclothymic disorder, and other mood conditions. Includes sections on understanding mood disorders, types of mood disorders (with detailed descriptions), signs and symptoms for manic and depressive episodes, self-help strategies for managing episodes, long-term management techniques, professional treatment options, crisis support, and UK resources.
+  - **Eating Disorders Page** (`/adults/eating-disorders`): Comprehensive page covering anorexia nervosa, bulimia nervosa, binge eating disorder, and OSFED. Includes sections on understanding eating disorders, types of eating disorders with detailed descriptions, behavioral and physical warning signs, supporting recovery (for individuals and families), treatment options (therapy types, medical support), crisis support for medical emergencies, and UK resources including Beat Eating Disorders helpline.
+  - **Adults Page Navigation**: Added new topic cards for Mood Disorders (🎢 emoji, indigo gradient) and Eating Disorders (🍽️ emoji, rose gradient) to the Mental Health Topics section alongside existing topics (Depression, Anxiety, PTSD, Stress, Grief, Chronic Pain, Invisible Illness).
   - **Softer colors**: Changed buttons to pastel colors (sky blue, violet, amber, teal) with white text for better readability
   - **Removed emojis**: Menu buttons now display just text without emojis
   - **Hamburger menu on laptop**: Changed breakpoint from `md` to `lg` so hamburger menu shows on screens < 1024px (tablets/laptops)
