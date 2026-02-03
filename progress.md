@@ -55,7 +55,14 @@ The Wellbeing Corner website built with Next.js, TypeScript, and Tailwind CSS. F
 
 ## 📝 Recent Changes (Latest)
 
-### 2026-02-03: Menu Bar Updates and New Pages
+### 2026-02-03: Feedback Page Added
+- **Created Feedback Page** (`/feedback`)
+  - Added form with name, email, feedback type, and message fields
+  - Feedback types include: General Feedback, Suggestion for Improvement, Report an Issue, Content Feedback, Share Your Experience, Other
+  - Success message displayed after submission
+  - Privacy notice included with guidance on data handling
+  - Added "Feedback" button to navigation header (rose-colored)
+  - Styled consistently with other pages using purple gradient theme
 - **Added Mood Disorders and Eating Disorders pages for adults**
   - Created `/adults/mood-disorders` page covering bipolar disorder, cyclothymic disorder, with signs/symptoms, self-help strategies, treatment options, and UK resources
   - Created `/adults/eating-disorders` page covering anorexia, bulimia, binge eating, OSFED with warning signs, recovery support, treatment options, and Beat Eating Disorders helpline
