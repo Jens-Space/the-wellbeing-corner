@@ -63,7 +63,7 @@ The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwin
 
 ## 📝 Recent Changes (Latest)
 - **2026-02-03T18:34:00.000Z**: Added copyright notice to website footer:
-  - Added "© 2025 The Wellbeing Corner. All rights reserved." text below the disclaimer
+  - Added "© 2026 Jen's Space. All rights reserved." text below the disclaimer
   - Copyright text uses smaller font (text-xs) and lighter color (text-gray-400) for subtle appearance
   - Footer now displays: Disclaimer first, then copyright notice
 
