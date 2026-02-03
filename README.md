@@ -1,8 +1,14 @@
 # 🌱 The Wellbeing Corner
 
+## ✅ Project Complete
+
+The Wellbeing Corner website is now complete! All features, pages, and functionality have been implemented.
+
 The Wellbeing Corner is an inclusive, compassionate website built with **Next.js**, designed to support **adults, teens, and children**, including those affected by **chronic pain, invisible illness, and mood disorders**.
 
 This project focuses on education, validation, accessibility, and safe signposting — not diagnosis or treatment.
+
+**Live Website:** https://jens-space.github.io/the-wellbeing-corner/
 
 ---
 
@@ -170,6 +176,7 @@ Our mission is to reduce stigma, increase understanding, and remind people that 
 | Mood Disorders              | `/mood-disorders`  |
 | Chronic & Invisible Illness | `/chronic-illness` |
 | UK Resources                | `/resources`       |
+| Feedback                    | `/feedback`        |
 
 ---
 
