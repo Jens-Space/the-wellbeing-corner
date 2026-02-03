@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const menuItems = [
   { href: '/', label: 'Home' },
@@ -20,15 +19,12 @@ export default function Header() {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           {/* Logo */}
-          <Link href="/" aria-label="The Wellbeing Corner Home">
-            <Image
+          <Link href="/" aria-label="The Wellbeing Corner Home" className="flex items-center justify-center">
+            <img
               src="/logo.png"
               alt="The Wellbeing Corner Logo"
-              width={500}
-              height={500}
               className="object-contain cursor-pointer hover:opacity-90 transition-opacity"
               style={{ width: '280px', height: 'auto' }}
-              priority
             />
           </Link>
 
