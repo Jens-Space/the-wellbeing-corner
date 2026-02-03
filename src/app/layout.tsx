@@ -31,8 +31,11 @@ export default function RootLayout({
           </main>
           <footer className="bg-white border-t mt-12">
             <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-500 mb-2">
                 This website provides educational and supportive information only and is not a substitute for professional mental health care.
+              </p>
+              <p className="text-center text-xs text-gray-400">
+                © 2025 The Wellbeing Corner. All rights reserved.
               </p>
             </div>
           </footer>
