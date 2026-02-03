@@ -15,16 +15,16 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="px-4 py-3 bg-white">
+    <nav className="px-4 py-2 bg-white">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3">
           {/* Logo */}
-          <Link href="/" aria-label="The Wellbeing Corner Home" className="flex items-center justify-center">
+          <Link href="/" aria-label="The Wellbeing Corner Home">
             <img
               src="/the-wellbeing-corner/logo.png"
               alt="The Wellbeing Corner Logo"
               className="object-contain cursor-pointer hover:opacity-90 transition-opacity"
-              style={{ width: '280px', height: 'auto' }}
+              style={{ width: '300px', height: 'auto' }}
             />
           </Link>
 
@@ -35,7 +35,7 @@ export default function Header() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="px-5 py-2 bg-white text-gray-800 border-2 border-emerald-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-emerald-100"
+                    className="px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-100"
                   >
                     {item.label}
                   </Link>
@@ -46,7 +46,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-emerald-600 bg-emerald-100 rounded-full hover:bg-emerald-200 transition-colors"
+            className="md:hidden p-2 text-purple-600 bg-purple-100 rounded-full hover:bg-purple-200 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -56,13 +56,13 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-sm mt-3 pb-4 rounded-xl shadow-lg border border-emerald-200 mx-2">
+          <div className="md:hidden bg-white/95 backdrop-blur-sm mt-2 pb-4 rounded-xl shadow-lg border border-purple-200 mx-2">
             <ul className="space-y-2 px-2 text-center">
               {menuItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="block py-3 px-4 bg-white text-gray-800 border border-emerald-300 hover:text-white hover:bg-emerald-600 rounded-lg transition-all duration-300 font-medium text-lg"
+                    className="block py-3 px-4 bg-white text-black border border-purple-300 hover:text-white hover:bg-purple-600 rounded-lg transition-all duration-300 font-medium text-lg"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
