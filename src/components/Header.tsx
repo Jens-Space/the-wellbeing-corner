@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const menuItems = [
-  { href: '/', label: 'Home' },
   { href: '/adults', label: 'For Adults' },
   { href: '/teens', label: 'For Teens' },
   { href: '/children', label: 'For Families' },
