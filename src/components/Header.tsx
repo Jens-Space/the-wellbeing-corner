@@ -4,10 +4,10 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const menuItems = [
-  { href: '/adults', label: 'For Adults' },
-  { href: '/teens', label: 'For Teens' },
-  { href: '/children', label: 'For Families' },
-  { href: '/resources', label: 'Get Help' },
+  { href: '/adults', label: 'For Adults', emoji: '👥', color: 'bg-blue-500 hover:bg-blue-600 border-blue-600' },
+  { href: '/teens', label: 'For Teens', emoji: '🧑‍🎓', color: 'bg-purple-500 hover:bg-purple-600 border-purple-600' },
+  { href: '/children', label: 'For Families', emoji: '👨‍👩‍👧‍👦', color: 'bg-orange-500 hover:bg-orange-600 border-orange-600' },
+  { href: '/resources', label: 'Get Help', emoji: '🆘', color: 'bg-emerald-500 hover:bg-emerald-600 border-emerald-600' },
 ]
 
 export default function Header() {
@@ -28,15 +28,16 @@ export default function Header() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-1">
-            <ul className="flex gap-1">
+          <div className="hidden md:flex gap-2">
+            <ul className="flex gap-2">
               {menuItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="px-4 py-2 bg-white text-black border-2 border-purple-600 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:bg-purple-100"
+                    className={`px-5 py-2 ${item.color} text-white border-2 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-2`}
                   >
-                    {item.label}
+                    <span>{item.emoji}</span>
+                    <span>{item.label}</span>
                   </Link>
                 </li>
               ))}
@@ -61,10 +62,11 @@ export default function Header() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="block py-3 px-4 bg-white text-black border border-purple-300 hover:text-white hover:bg-purple-600 rounded-lg transition-all duration-300 font-medium text-lg"
+                    className={`block py-3 px-4 ${item.color} text-white border rounded-lg transition-all duration-300 font-medium text-lg flex items-center justify-center gap-2`}
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {item.label}
+                    <span>{item.emoji}</span>
+                    <span>{item.label}</span>
                   </Link>
                 </li>
               ))}
