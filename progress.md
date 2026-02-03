@@ -57,8 +57,9 @@ The Wellbeing Corner website built with Next.js, TypeScript, and Tailwind CSS. F
 
 ### 2026-02-03: Feedback Page Added
 - **Created Feedback Page** (`/feedback`)
-  - Added form with name, email, feedback type, and message fields
-  - Feedback types include: General Feedback, Suggestion for Improvement, Report an Issue, Content Feedback, Share Your Experience, Other
+  - Added form with name, email, and feedback fields
+  - Uses Formsubmit.co to send submissions to jenniferellen1992@gmail.com
+  - Purple/pink gradient design with emoji header
   - Success message displayed after submission
   - Privacy notice included with guidance on data handling
   - Added "Feedback" button to navigation header (rose-colored)
