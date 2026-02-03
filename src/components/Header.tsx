@@ -4,10 +4,10 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const menuItems = [
-  { href: '/adults', label: 'For Adults', emoji: '👥', color: 'bg-blue-500 hover:bg-blue-600 border-blue-600' },
-  { href: '/teens', label: 'For Teens', emoji: '🧑‍🎓', color: 'bg-purple-500 hover:bg-purple-600 border-purple-600' },
-  { href: '/children', label: 'For Families', emoji: '👨‍👩‍👧‍👦', color: 'bg-orange-500 hover:bg-orange-600 border-orange-600' },
-  { href: '/resources', label: 'Get Help', emoji: '🆘', color: 'bg-emerald-500 hover:bg-emerald-600 border-emerald-600' },
+  { href: '/adults', label: 'For Adults', emoji: '👥', color: 'bg-sky-100 hover:bg-sky-200 border-sky-400 text-sky-800' },
+  { href: '/teens', label: 'For Teens', emoji: '🧑‍🎓', color: 'bg-violet-100 hover:bg-violet-200 border-violet-400 text-violet-800' },
+  { href: '/children', label: 'For Families', emoji: '👨‍👩‍👧‍👦', color: 'bg-amber-100 hover:bg-amber-200 border-amber-400 text-amber-800' },
+  { href: '/resources', label: 'Get Help', emoji: '🆘', color: 'bg-teal-100 hover:bg-teal-200 border-teal-400 text-teal-800' },
 ]
 
 export default function Header() {
