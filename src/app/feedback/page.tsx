@@ -39,7 +39,7 @@ export default function FeedbackPage() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          message: formData.message,
+          message: `\n---\nFeedback from: The Wellbeing Corner\nWebsite: the-wellbeing-corner.jens-space.com\n---\n\n${formData.message}`,
           _subject: 'New Feedback from The Wellbeing Corner',
         }),
       });
