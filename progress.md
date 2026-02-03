@@ -1,6 +1,6 @@
 # The Wellbeing Corner - Development Progress
 
-**Last Updated:** 2026-02-03T16:47:00.000Z (UTC)
+**Last Updated:** 2026-02-03T18:05:00.000Z (UTC)
 
 ## 🎯 Project Overview
 The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwind CSS. Focuses on education, validation, and safe signposting for mental health support.
@@ -62,6 +62,16 @@ The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwin
 - **Pages**: All 8 pages accessible and populated with content
 
 ## 📝 Recent Changes (Latest)
+- **2026-02-03T18:05:00.000Z**: Menu bar refinements:
+  - **Softer colors**: Changed buttons to pastel colors (sky blue, violet, amber, teal) with white text for better readability
+  - **Removed emojis**: Menu buttons now display just text without emojis
+  - **Hamburger menu on laptop**: Changed breakpoint from `md` to `lg` so hamburger menu shows on screens < 1024px (tablets/laptops)
+  - **Logo centered**: Logo now centered with flexbox, hamburger menu below it
+  - **Bigger hamburger button**: Increased padding to `p-3` and icon size to `text-2xl`
+  - **More visible hamburger**: Changed from light purple (`bg-purple-100`) to dark purple (`bg-purple-600`) with white text
+  - **Centered SVG icon**: Replaced emoji with centered SVG hamburger icon that toggles between ☰ and ✕
+  - **GitHub Actions auto-deploy**: Enabled by setting workflow permissions to "Read and write" in repository settings
+
 - **2026-02-03T16:47:00.000Z**: Updated menu bar to match chronic haven website exactly:
   - **Header Styling**: Changed to `px-4 py-2` padding, `gap-3` spacing, purple border colors (`border-purple-600`), black text color
   - **Logo**: Added logo image at 400px width using `/the-wellbeing-corner/logo.png` path
