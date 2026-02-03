@@ -6,6 +6,7 @@ export default function FeedbackPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    feedbackType: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -16,7 +17,7 @@ export default function FeedbackPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -29,7 +30,6 @@ export default function FeedbackPage() {
     setError('');
 
     try {
-      // Using FormSubmit.co - emails will be sent to the email in the form
       const response = await fetch('https://formsubmit.co/ajax/jenniferellen1992@gmail.com', {
         method: 'POST',
         headers: { 
@@ -39,7 +39,7 @@ export default function FeedbackPage() {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          message: `\n---\nFeedback from: The Wellbeing Corner\nWebsite: the-wellbeing-corner.jens-space.com\n---\n\n${formData.message}`,
+          message: `\n---\nFeedback Type: ${formData.feedbackType}\nFeedback from: The Wellbeing Corner\nWebsite: the-wellbeing-corner.jens-space.com\n---\n\n${formData.message}`,
           _subject: 'New Feedback from The Wellbeing Corner',
         }),
       });
@@ -48,7 +48,7 @@ export default function FeedbackPage() {
 
       if (data.success === 'true' || response.ok) {
         setSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', feedbackType: '', message: '' });
       } else {
         setError('Failed to send feedback. Please try again.');
       }
@@ -120,6 +120,24 @@ export default function FeedbackPage() {
               required
               className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all bg-white"
             />
+          </div>
+          
+          <div>
+            <label className="block text-gray-700 font-semibold mb-2">Feedback Type</label>
+            <select
+              name="feedbackType"
+              value={formData.feedbackType}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 border-2 border-purple-300 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-200 transition-all bg-white"
+            >
+              <option value="">Select a type...</option>
+              <option value="General Feedback">General Feedback</option>
+              <option value="Bug Report">Bug Report</option>
+              <option value="Feature Request">Feature Request</option>
+              <option value="Content Suggestion">Content Suggestion</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
           
           <div>
