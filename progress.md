@@ -1,6 +1,6 @@
 # The Wellbeing Corner - Development Progress
 
-**Last Updated:** 2026-02-02T16:58:00.000Z (UTC)
+**Last Updated:** 2026-02-03T16:47:00.000Z (UTC)
 
 ## 🎯 Project Overview
 The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwind CSS. Focuses on education, validation, and safe signposting for mental health support.
@@ -62,6 +62,17 @@ The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwin
 - **Pages**: All 8 pages accessible and populated with content
 
 ## 📝 Recent Changes (Latest)
+- **2026-02-03T16:47:00.000Z**: Updated menu bar to match chronic haven website exactly:
+  - **Header Styling**: Changed to `px-4 py-2` padding, `gap-3` spacing, purple border colors (`border-purple-600`), black text color
+  - **Logo**: Added logo image at 400px width using `/the-wellbeing-corner/logo.png` path
+  - **Menu Buttons**: Changed to purple styling with `hover:bg-purple-100` effects
+  - **Mobile Menu**: Purple-themed with `rounded-xl`, `mt-2`, purple border and hover colors
+  - **Removed emoji-based design**: Replaced colorful gradient buttons with clean white buttons with purple borders
+  - **Fixed deployment**: Updated GitHub Actions workflow to use `docs` folder instead of `out` folder for static export
+  - **Fixed logo path**: Ensured logo uses correct basePath `/the-wellbeing-corner/logo.png`
+  - **Updated dependencies**: Fixed package-lock.json sync issue
+  - **GitHub Pages**: Changed deployment method to use `docs` folder with GitHub Actions (like chronic-haven)
+
 - **2026-02-02T16:58:00.000Z**: Made multiple design improvements to create a friendlier, more colorful website:
   - **Teen Page Title Update**: Changed from "🧠 Teen Support" to "🌟 Hey There! Your Space for Support" for warmer, more welcoming tone
   - **Teen Page Styling**: Added blue/cyan gradient hero section with larger title (text-5xl), additional tagline "Gentle strategies, understanding, and clear signposting to professional help when needed."
