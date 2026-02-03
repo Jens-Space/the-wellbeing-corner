@@ -47,7 +47,7 @@ export default function Header() {
 
           {/* Mobile Menu Button - only on smaller screens */}
           <button
-            className="lg:hidden p-3 text-purple-600 bg-purple-100 rounded-full hover:bg-purple-200 transition-colors"
+            className="lg:hidden p-3 text-white bg-purple-600 rounded-full hover:bg-purple-700 transition-colors shadow-md"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
