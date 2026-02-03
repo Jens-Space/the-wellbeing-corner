@@ -24,7 +24,7 @@ export default function Header() {
               src="/the-wellbeing-corner/logo.png"
               alt="The Wellbeing Corner Logo"
               className="object-contain cursor-pointer hover:opacity-90 transition-opacity"
-              style={{ width: '300px', height: 'auto' }}
+              style={{ width: '400px', height: 'auto' }}
             />
           </Link>
 
