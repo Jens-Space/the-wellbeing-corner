@@ -4,10 +4,10 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const menuItems = [
-  { href: '/adults', label: 'For Adults', emoji: '👥', color: 'bg-sky-100 hover:bg-sky-200 border-sky-400 text-sky-800' },
-  { href: '/teens', label: 'For Teens', emoji: '🧑‍🎓', color: 'bg-violet-100 hover:bg-violet-200 border-violet-400 text-violet-800' },
-  { href: '/children', label: 'For Families', emoji: '👨‍👩‍👧‍👦', color: 'bg-amber-100 hover:bg-amber-200 border-amber-400 text-amber-800' },
-  { href: '/resources', label: 'Get Help', emoji: '🆘', color: 'bg-teal-100 hover:bg-teal-200 border-teal-400 text-teal-800' },
+  { href: '/adults', label: 'For Adults', color: 'bg-sky-100 hover:bg-sky-200 border-sky-400' },
+  { href: '/teens', label: 'For Teens', color: 'bg-violet-100 hover:bg-violet-200 border-violet-400' },
+  { href: '/children', label: 'For Families', color: 'bg-amber-100 hover:bg-amber-200 border-amber-400' },
+  { href: '/resources', label: 'Get Help', color: 'bg-teal-100 hover:bg-teal-200 border-teal-400' },
 ]
 
 export default function Header() {
@@ -34,10 +34,9 @@ export default function Header() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`px-5 py-2 ${item.color} text-white border-2 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center gap-2`}
+                    className={`px-5 py-2 ${item.color} border-2 rounded-full transition-all duration-300 font-semibold text-base md:text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5`}
                   >
-                    <span>{item.emoji}</span>
-                    <span>{item.label}</span>
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -62,11 +61,10 @@ export default function Header() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`block py-3 px-4 ${item.color} text-white border rounded-lg transition-all duration-300 font-medium text-lg flex items-center justify-center gap-2`}
+                    className={`block py-3 px-4 ${item.color} border rounded-lg transition-all duration-300 font-medium text-lg`}
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <span>{item.emoji}</span>
-                    <span>{item.label}</span>
+                    {item.label}
                   </Link>
                 </li>
               ))}
