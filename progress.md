@@ -62,6 +62,11 @@ The Wellbeing Corner website built with Next.js, TypeScript, Python, and Tailwin
 - **Pages**: All 8 pages accessible and populated with content
 
 ## 📝 Recent Changes (Latest)
+- **2026-02-03T18:34:00.000Z**: Added copyright notice to website footer:
+  - Added "© 2025 The Wellbeing Corner. All rights reserved." text below the disclaimer
+  - Copyright text uses smaller font (text-xs) and lighter color (text-gray-400) for subtle appearance
+  - Footer now displays: Disclaimer first, then copyright notice
+
 - **2026-02-03T18:16:00.000Z**: Added new mental health topic pages for adults:
   - **Mood Disorders Page** (`/adults/mood-disorders`): Comprehensive page covering bipolar disorder, cyclothymic disorder, and other mood conditions. Includes sections on understanding mood disorders, types of mood disorders (with detailed descriptions), signs and symptoms for manic and depressive episodes, self-help strategies for managing episodes, long-term management techniques, professional treatment options, crisis support, and UK resources.
   - **Eating Disorders Page** (`/adults/eating-disorders`): Comprehensive page covering anorexia nervosa, bulimia nervosa, binge eating disorder, and OSFED. Includes sections on understanding eating disorders, types of eating disorders with detailed descriptions, behavioral and physical warning signs, supporting recovery (for individuals and families), treatment options (therapy types, medical support), crisis support for medical emergencies, and UK resources including Beat Eating Disorders helpline.
