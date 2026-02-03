@@ -55,12 +55,6 @@ export default function AdultsPage() {
             </h3>
             <p className="text-gray-700">Managing mental health with chronic conditions</p>
           </a>
-          <a href="/the-wellbeing-corner/adults/invisible-illness" className="block bg-gradient-to-br from-lime-50 to-green-50 hover:bg-lime-100 border border-lime-200 rounded-xl p-6 transition-colors duration-200 shadow-md md:col-span-2 lg:col-span-1">
-            <h3 className="text-xl font-bold text-lime-800 mb-3 flex items-center">
-              <span className="mr-2">👻</span> Invisible Illness
-            </h3>
-            <p className="text-gray-700">Living with conditions others can't see</p>
-          </a>
           <a href="/the-wellbeing-corner/adults/mood-disorders" className="block bg-gradient-to-br from-indigo-50 to-blue-50 hover:bg-indigo-100 border border-indigo-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
             <h3 className="text-xl font-bold text-indigo-800 mb-3 flex items-center">
               <span className="mr-2">🎢</span> Mood Disorders
@@ -72,6 +66,12 @@ export default function AdultsPage() {
               <span className="mr-2">🍽️</span> Eating Disorders
             </h3>
             <p className="text-gray-700">Support for anorexia, bulimia, and binge eating</p>
+          </a>
+          <a href="/the-wellbeing-corner/adults/invisible-illness" className="block bg-gradient-to-br from-lime-50 to-green-50 hover:bg-lime-100 border border-lime-200 rounded-xl p-6 transition-colors duration-200 shadow-md">
+            <h3 className="text-xl font-bold text-lime-800 mb-3 flex items-center">
+              <span className="mr-2">👻</span> Invisible Illness
+            </h3>
+            <p className="text-gray-700">Living with conditions others can't see</p>
           </a>
         </div>
       </div>
