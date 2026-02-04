@@ -398,9 +398,6 @@ export default function MoodDisordersPage() {
         <a href="/the-wellbeing-corner/adults" className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm sm:text-base">
           Back to Adults
         </a>
-        <a href="/" className="px-4 py-2 sm:px-6 sm:py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors text-sm sm:text-base">
-          Back to Home
-        </a>
       </div>
     </div>
   )
