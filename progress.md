@@ -107,6 +107,16 @@ The website includes a fully functional feedback form at `/feedback` with:
 
 ## 📝 Recent Changes
 
+### 2026-02-04: Mood Disorders Page Enhanced
+- ✅ Updated mood disorders page to cover all major mood disorders comprehensively
+- ✅ Added Major Depressive Disorder section
+- ✅ Added Persistent Depressive Disorder (Dysthymia) section
+- ✅ Added Seasonal Affective Disorder (SAD) section
+- ✅ Added Premenstrual Dysphoric Disorder (PMDD) section
+- ✅ Updated symptom lists for manic/hypomanic episodes and depressive episodes
+- ✅ Enhanced treatment information with additional therapy approaches
+- ✅ Added SAD Association as a UK resource
+
 ### 2026-02-03: Feedback Page Enhanced & Project Completed
 - ✅ Feedback page updated with Formsubmit.co JSON endpoint
 - ✅ Added feedback type dropdown
