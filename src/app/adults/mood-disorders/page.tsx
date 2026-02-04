@@ -5,10 +5,10 @@ export default function MoodDisordersPage() {
     <div id="top" className="space-y-12">
       <div className="bg-gradient-to-br from-violet-100 via-purple-50 to-fuchsia-50 rounded-2xl p-8 md:p-10 text-center shadow-lg border border-purple-200">
         <h1 className="text-3xl md:text-5xl font-bold text-purple-800 mb-3 md:mb-4">
-          <span className="mr-3">💜</span> Mood & Emotional Health
+          <span className="mr-3">💜</span> Mood Disorders
         </h1>
         <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-4 leading-relaxed">
-          Understanding and navigating mood changes with compassion and support.
+          Understanding and navigating mood disorders with compassion and support.
           <span className="block mt-2 text-purple-600 italic">You don't have to face this alone.</span>
         </p>
       </div>
@@ -39,8 +39,9 @@ export default function MoodDisordersPage() {
               <span className="mr-2">💜</span> What Are Mood Disorders?
             </h3>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Mood disorders are mental health conditions that involve changes in mood that can feel intense and lasting.
+              Mood disorders are mental health conditions that involve persistent changes in mood that can feel intense and lasting.
               <span className="font-medium text-teal-700"> These experiences are real and valid</span> — they're not a sign of weakness or personal failing.
+              They include a range of conditions from depression to bipolar disorder and everything in between.
               Many people experience mood disorders, and with understanding, treatment, and support, it is possible to feel better and live well.
             </p>
           </div>
@@ -49,21 +50,34 @@ export default function MoodDisordersPage() {
             <h3 className="text-2xl font-medium text-teal-600 mb-4 flex items-center">
               <span className="mr-2">📖</span> Types of Mood Disorders
             </h3>
-            <p className="text-gray-600 mb-6 italic">Different people experience mood changes in different ways. Here are some common types:</p>
+            <p className="text-gray-600 mb-6 italic">Different people experience mood changes in different ways. Here are the main types:</p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-white to-teal-50 p-6 rounded-2xl border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
                 <h4 className="text-lg font-semibold text-teal-800 mb-3 flex items-center">
                   <span className="mr-2">🌊</span> Bipolar Disorder
                 </h4>
                 <p className="text-gray-700 mb-3">
-                  Involves shifts between different mood states — times of higher energy and mood (manic episodes) and times of lower mood (depressive episodes).
+                  Involves shifts between different mood states — times of higher energy and mood (manic or hypomanic episodes) and times of lower mood (depressive episodes).
                 </p>
                 <div className="bg-teal-50 rounded-lg p-3 mt-3">
                   <p className="text-sm text-teal-700">
-                    <strong>✨ During higher mood times:</strong> You might feel more energetic, need less sleep, have lots of ideas, or feel unusually upbeat.
+                    <strong>✨ During manic episodes:</strong> You might feel more energetic, need less sleep, have lots of ideas, or feel unusually upbeat.
                   </p>
                   <p className="text-sm text-teal-700 mt-2">
-                    <strong>🌧️ During lower mood times:</strong> You might feel tired, sad, lose interest in things, or find it hard to concentrate.
+                    <strong>🌧️ During depressive episodes:</strong> You might feel tired, sad, lose interest in things, or find it hard to concentrate.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-white to-teal-50 p-6 rounded-2xl border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="text-lg font-semibold text-teal-800 mb-3 flex items-center">
+                  <span className="mr-2">😔</span> Major Depressive Disorder
+                </h4>
+                <p className="text-gray-700 mb-3">
+                  Characterised by persistent feelings of sadness, emptiness, hopelessness, and loss of interest that significantly affect daily life.
+                </p>
+                <div className="bg-teal-50 rounded-lg p-3 mt-3">
+                  <p className="text-sm text-teal-700">
+                    <strong>Common symptoms:</strong> Persistent sad mood, changes in sleep and appetite, fatigue, difficulty concentrating, feelings of worthlessness.
                   </p>
                 </div>
               </div>
@@ -72,7 +86,7 @@ export default function MoodDisordersPage() {
                   <span className="mr-2">🌅</span> Cyclothymic Disorder
                 </h4>
                 <p className="text-gray-700 mb-3">
-                  Involves mood changes that are milder and more ongoing, without reaching the full intensity of the higher or lower mood episodes.
+                  Involves mood changes that are milder and more ongoing, without reaching the full intensity of manic or major depressive episodes.
                 </p>
                 <p className="text-sm text-teal-600 bg-teal-50 rounded-lg p-2">
                   Symptoms may come and go over a longer period, often for two years or more.
@@ -80,18 +94,43 @@ export default function MoodDisordersPage() {
               </div>
               <div className="bg-gradient-to-br from-white to-teal-50 p-6 rounded-2xl border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
                 <h4 className="text-lg font-semibold text-teal-800 mb-3 flex items-center">
-                  <span className="mr-2">🔄</span> Disruptive Mood Dysregulation Disorder
+                  <span className="mr-2">🔄</span> Persistent Depressive Disorder (Dysthymia)
                 </h4>
                 <p className="text-gray-700 mb-3">
-                  Involves frequent temper outbursts and ongoing irritability, typically diagnosed in younger people.
+                  A chronic form of depression with milder but longer-lasting symptoms that can persist for years.
+                </p>
+                <p className="text-sm text-teal-600 bg-teal-50 rounded-lg p-2">
+                  Though symptoms may be less severe, they can still impact quality of life significantly.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-white to-teal-50 p-6 rounded-2xl border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
                 <h4 className="text-lg font-semibold text-teal-800 mb-3 flex items-center">
-                  <span className="mr-2">📉</span> Depression with Bipolar Features
+                  <span className="mr-2">☀️</span> Seasonal Affective Disorder (SAD)
                 </h4>
                 <p className="text-gray-700 mb-3">
-                  Involves periods of low mood that may occur as part of a bipolar condition, which can sometimes take time to identify.
+                  Depression that occurs at specific times of the year, usually during autumn and winter when there is less natural light.
+                </p>
+                <p className="text-sm text-teal-600 bg-teal-50 rounded-lg p-2">
+                  Symptoms typically improve with the arrival of spring and longer daylight hours.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-white to-teal-50 p-6 rounded-2xl border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="text-lg font-semibold text-teal-800 mb-3 flex items-center">
+                  <span className="mr-2">🌸</span> Premenstrual Dysphoric Disorder (PMDD)
+                </h4>
+                <p className="text-gray-700 mb-3">
+                  A severe form of premenstrual syndrome causing significant mood disturbances in the week or two before menstruation.
+                </p>
+                <p className="text-sm text-teal-600 bg-teal-50 rounded-lg p-2">
+                  Symptoms usually improve once menstruation begins.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-white to-teal-50 p-6 rounded-2xl border border-teal-200 shadow-sm hover:shadow-md transition-shadow">
+                <h4 className="text-lg font-semibold text-teal-800 mb-3 flex items-center">
+                  <span className="mr-2">⚡</span> Disruptive Mood Dysregulation Disorder
+                </h4>
+                <p className="text-gray-700 mb-3">
+                  Characterised by severe temper outbursts and persistent irritability, typically diagnosed in children and adolescents.
                 </p>
               </div>
             </div>
@@ -107,7 +146,7 @@ export default function MoodDisordersPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-teal-50 to-white p-6 rounded-2xl border border-teal-200">
                 <h4 className="text-lg font-semibold text-teal-800 mb-3 flex items-center">
-                  <span className="mr-2">✨</span> Higher Mood Times
+                  <span className="mr-2">✨</span> Manic/Hypomanic Symptoms
                 </h4>
                 <ul className="space-y-2 text-gray-700 ml-2">
                   <li>• Feeling unusually upbeat or full of energy</li>
@@ -116,11 +155,12 @@ export default function MoodDisordersPage() {
                   <li>• Feeling like you can take on the world</li>
                   <li>• Doing things without thinking them through</li>
                   <li>• Finding it hard to focus on one thing</li>
+                  <li>• Increased goal-directed activity</li>
                 </ul>
               </div>
               <div className="bg-gradient-to-br from-indigo-50 to-white p-6 rounded-2xl border border-indigo-200">
                 <h4 className="text-lg font-semibold text-indigo-800 mb-3 flex items-center">
-                  <span className="mr-2">🌧️</span> Lower Mood Times
+                  <span className="mr-2">🌧️</span> Depressive Symptoms
                 </h4>
                 <ul className="space-y-2 text-gray-700 ml-2">
                   <li>• Feeling sad, empty, or down most of the day</li>
@@ -129,7 +169,7 @@ export default function MoodDisordersPage() {
                   <li>• Sleep difficulties (too much or too little)</li>
                   <li>• Feeling tired or low on energy</li>
                   <li>• Harsh thoughts about yourself</li>
-                  <li>• Difficult thoughts that need support</li>
+                  <li>• Difficulty concentrating or making decisions</li>
                 </ul>
               </div>
             </div>
@@ -155,14 +195,14 @@ export default function MoodDisordersPage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-white to-emerald-50 p-6 rounded-2xl border border-emerald-200 shadow-sm">
                 <h4 className="text-lg font-semibold text-emerald-800 mb-3 flex items-center">
-                  <span className="mr-2">✨</span> When You're Feeling Higher Energy
+                  <span className="mr-2">✨</span> When You're Feeling High Energy
                 </h4>
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li>• Take time before making big decisions</li>
                   <li>• Let someone you trust know how you're feeling</li>
                   <li>• Try calming activities like walking in nature</li>
                   <li>• Keep to regular sleep times as much as possible</li>
-                  <li>• Be gentle with yourself if you overspend — it happens</li>
+                  <li>• Be gentle with yourself — it happens</li>
                   <li>• Reach out to your care team if things feel intense</li>
                 </ul>
               </div>
@@ -250,7 +290,8 @@ export default function MoodDisordersPage() {
                 </p>
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li><strong>Mood stabilisers:</strong> Can help smooth out mood swings</li>
-                  <li><strong>Other medications:</strong> Some antipsychotics or antidepressants may be used</li>
+                  <li><strong>Antidepressants:</strong> May be used for depressive episodes</li>
+                  <li><strong>Antipsychotics:</strong> Sometimes used for severe symptoms</li>
                   <li><strong>Sleep support:</strong> Short-term help if sleep is difficult</li>
                 </ul>
                 <p className="text-sm text-amber-600 mt-3 bg-amber-50 rounded-lg p-2">
@@ -266,9 +307,9 @@ export default function MoodDisordersPage() {
                 </p>
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li><strong>CBT:</strong> Helps change unhelpful thought patterns</li>
-                  <li><strong>Daily routines therapy:</strong> Focuses on regular patterns</li>
+                  <li><strong>Interpersonal Therapy:</strong> Focuses on relationships</li>
                   <li><strong>Family therapy:</strong> Helps loved ones support you better</li>
-                  <li><strong>Education:</strong> Learning more about your experiences</li>
+                  <li><strong>Psychotherapy:</strong> Deep exploration of emotions</li>
                 </ul>
               </div>
             </div>
@@ -359,6 +400,7 @@ export default function MoodDisordersPage() {
               <li><strong>Bipolar UK:</strong> bipolaruk.org — Helpline 0333 323 3880</li>
               <li><strong>Mind:</strong> mind.org.uk — Infoline 0300 123 3393</li>
               <li><strong>Rethink Mental Illness:</strong> rethink.org — Advice line 0300 5000 927</li>
+              <li><strong>SAD Association:</strong> sad.org.uk — Seasonal affective disorder support</li>
             </ul>
           </div>
           <div className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-2xl border border-gray-200 shadow-sm">
