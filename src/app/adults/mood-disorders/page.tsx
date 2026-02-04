@@ -5,11 +5,11 @@ export default function MoodDisordersPage() {
     <div id="top" className="space-y-12">
       <div className="bg-gradient-to-br from-violet-100 via-purple-50 to-fuchsia-50 rounded-2xl p-8 md:p-10 text-center shadow-lg border border-purple-200">
         <h1 className="text-3xl md:text-5xl font-bold text-purple-800 mb-3 md:mb-4">
-          <span className="mr-3">💜</span> Mood Disorders
+          <span className="mr-3">💜</span> Mood & Emotional Health
         </h1>
         <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-4 leading-relaxed">
-          Understanding and managing mood conditions with compassion and care.
-          <span className="block mt-2 text-purple-600 italic">You don't have to navigate this journey alone.</span>
+          Understanding and navigating mood changes with compassion and support.
+          <span className="block mt-2 text-purple-600 italic">You don't have to face this alone.</span>
         </p>
       </div>
 
