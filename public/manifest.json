@@ -54,12 +54,6 @@
       "purpose": "any maskable"
     },
     {
-      "src": "/the-wellbeing-corner/icons/icon-310x310.png",
-      "sizes": "310x310",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
       "src": "/the-wellbeing-corner/icons/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
@@ -77,21 +71,21 @@
       "name": "Adult Support",
       "short_name": "Adults",
       "description": "Mental health support for adults",
-      "url": "/the-wellbeing-corner/adults",
+      "url": "/the-wellbeing-corner/adults/",
       "icons": [{ "src": "/the-wellbeing-corner/icons/icon-96x96.png", "sizes": "96x96" }]
     },
     {
       "name": "Teen Support",
       "short_name": "Teens",
       "description": "Age-appropriate support for teenagers",
-      "url": "/the-wellbeing-corner/teens",
+      "url": "/the-wellbeing-corner/teens/",
       "icons": [{ "src": "/the-wellbeing-corner/icons/icon-96x96.png", "sizes": "96x96" }]
     },
     {
       "name": "UK Resources",
       "short_name": "Resources",
       "description": "UK mental health support services",
-      "url": "/the-wellbeing-corner/resources",
+      "url": "/the-wellbeing-corner/resources/",
       "icons": [{ "src": "/the-wellbeing-corner/icons/icon-96x96.png", "sizes": "96x96" }]
     }
   ],
