@@ -6,7 +6,7 @@
       <square150x150logo src="/the-wellbeing-corner/icons/icon-150x150.png"/>
       <wide310x150logo src="/the-wellbeing-corner/icons/icon-192x192.png"/>
       <square310x310logo src="/the-wellbeing-corner/icons/icon-310x310.png"/>
-      <TileColor>#818cf8</TileColor>
+      <TileColor>#ffffff</TileColor>
     </tile>
   </msapplication>
 </browserconfig>
