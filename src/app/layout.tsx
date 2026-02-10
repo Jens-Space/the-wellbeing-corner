@@ -14,6 +14,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'The Wellbeing Corner',
   description: 'An inclusive, compassionate website supporting adults, teens, and children with mental health education and resources.',
+  manifest: '/manifest.json',
 }
 
 export default function RootLayout({
@@ -23,7 +24,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#818cf8" />
+      </head>
       <body className={inter.className}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js');
+                });
+              }
+            `,
+          }}
+        />
         <div className="min-h-screen bg-gray-50">
           <Header />
           <main className="max-w-7xl xl:max-w-8xl mx-auto py-6 sm:px-6 lg:px-8 px-4">
