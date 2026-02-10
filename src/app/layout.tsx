@@ -14,7 +14,44 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'The Wellbeing Corner',
   description: 'An inclusive, compassionate website supporting adults, teens, and children with mental health education and resources.',
-  manifest: '/manifest.json',
+  metadataBase: new URL('https://jens-space.github.io'),
+  manifest: '/the-wellbeing-corner/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'The Wellbeing Corner',
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  icons: [
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-72x72.png', sizes: '72x72' },
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-96x96.png', sizes: '96x96' },
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-128x128.png', sizes: '128x128' },
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-144x144.png', sizes: '144x144' },
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-150x150.png', sizes: '150x150' },
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-152x152.png', sizes: '152x152' },
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-192x192.png', sizes: '192x192' },
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-310x310.png', sizes: '310x310' },
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-384x384.png', sizes: '384x384' },
+    { rel: 'icon', url: '/the-wellbeing-corner/icons/icon-512x512.png', sizes: '512x512' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-72x72.png', sizes: '72x72' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-96x96.png', sizes: '96x96' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-128x128.png', sizes: '128x128' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-144x144.png', sizes: '144x144' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-150x150.png', sizes: '150x150' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-152x152.png', sizes: '152x152' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-192x192.png', sizes: '192x192' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-310x310.png', sizes: '310x310' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-384x384.png', sizes: '384x384' },
+    { rel: 'apple-touch-icon', url: '/the-wellbeing-corner/icons/icon-512x512.png', sizes: '512x512' },
+    { rel: 'maskable-icon', url: '/the-wellbeing-corner/icons/icon-512x512.png', sizes: '512x512' },
+  ],
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+  },
 }
 
 export default function RootLayout({
@@ -25,9 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/icons/icon-192x192.png" sizes="192x192" />
-        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+        <link rel="manifest" href="/the-wellbeing-corner/manifest.json" />
         <meta name="theme-color" content="#818cf8" />
       </head>
       <body className={inter.className}>
@@ -36,7 +71,7 @@ export default function RootLayout({
             __html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js');
+                  navigator.serviceWorker.register('/the-wellbeing-corner/sw.js');
                 });
               }
             `,
