@@ -1,6 +1,6 @@
 1:HL["/the-wellbeing-corner/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/the-wellbeing-corner/_next/static/css/9b4b0bd7438c4f01.css","style",{"crossOrigin":""}]
-0:["KpgNhFrPP2WCbKF0gercQ",[[["",{"children":["adults",{"children":["ptsd",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/the-wellbeing-corner/_next/static/css/9b4b0bd7438c4f01.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
+0:["dkuWnpJqV20z1hb0f0eWu",[[["",{"children":["adults",{"children":["ptsd",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/the-wellbeing-corner/_next/static/css/9b4b0bd7438c4f01.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
 5:I[5846,["326","static/chunks/326-6057ec8f299921cb.js","185","static/chunks/app/layout-d6ac8e68d12e9eb7.js"],""]
 6:I[6954,[],""]
 7:I[7264,[],""]
