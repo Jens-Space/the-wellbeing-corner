@@ -12,6 +12,23 @@ This project focuses on education, validation, accessibility, and safe signposti
 
 ---
 
+## 🖼️ PWA & Browser Icons
+
+The Wellbeing Corner is configured as a Progressive Web App (PWA) with properly sized icons for all browsers:
+
+### Browser Support
+- **Chrome/Edge** - Uses 192x192 and 512x512 icons
+- **Firefox** - Uses 192x192 icon
+- **Safari** - Uses 192x192 icon
+- **Microsoft Edge** - Uses browserconfig.xml with 192x192 tile icons
+
+### Icon Features
+- White background for better visibility
+- Consistent icon size across all browsers (192x192 primary)
+- Maskable icons for adaptive PWA installation
+
+---
+
 ## 🚀 Deployment on GitHub Pages
 
 This project is configured for static export and can be deployed to GitHub Pages.
@@ -136,6 +153,23 @@ Then in `next.config.js`, uncomment and set:
 ```javascript
 basePath: '/your-repo-name',
 ```
+
+---
+
+## 🖼️ PWA & Browser Icons
+
+The Wellbeing Corner is configured as a Progressive Web App (PWA) with properly sized icons for all browsers:
+
+### Browser Support
+- **Chrome/Edge** - Uses 192x192 and 512x512 icons
+- **Firefox** - Uses 192x192 icon
+- **Safari** - Uses 192x192 icon
+- **Microsoft Edge** - Uses browserconfig.xml with 192x192 tile icons
+
+### Icon Features
+- White background for better visibility
+- Consistent icon size across all browsers (192x192 primary)
+- Maskable icons for adaptive PWA installation
 
 ---
 
@@ -339,6 +373,23 @@ Physical and mental health are deeply connected. Struggling emotionally due to i
 * Family Lives
 * Scope
 * Fibromyalgia Action UK
+
+---
+
+## 🖼️ PWA & Browser Icons
+
+The Wellbeing Corner is configured as a Progressive Web App (PWA) with properly sized icons for all browsers:
+
+### Browser Support
+- **Chrome/Edge** - Uses 192x192 and 512x512 icons
+- **Firefox** - Uses 192x192 icon
+- **Safari** - Uses 192x192 icon
+- **Microsoft Edge** - Uses browserconfig.xml with 192x192 tile icons
+
+### Icon Features
+- White background for better visibility
+- Consistent icon size across all browsers (192x192 primary)
+- Maskable icons for adaptive PWA installation
 
 ---
 
